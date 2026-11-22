@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0B1911">
+  <meta name="description" content="Türkiye gerçekleri ve gelecek vizyonlu mega projeler üzerine kişisel makale ve araştırma arşivi.">
+  <title>Arşiv &amp; Perspektif</title>
+
+  <!-- Google Fonts: Başlıklar için Lora, gövde metni için Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Ana Stil Dosyası -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Üst Başlık ve Navigasyon Alanı -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-group">
+        <a href="#/" id="site-brand" class="site-brand">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <span id="site-title-text">Arşiv &amp; Perspektif</span>
+        </a>
+        <p id="site-subtitle" class="site-subtitle">Yükleniyor...</p>
+      </div>
+
+      <!-- Dinamik Kategori Navigasyonu -->
+      <nav id="site-nav" class="site-nav" aria-label="Ana menü"></nav>
+    </div>
+  </header>
+
+  <!-- Dinamik İçerik Alanı (SPA / Hash Router Çıktısı) -->
+  <main id="app-root" class="site-main" aria-live="polite">
+    <div class="container">
+      <div class="loading-state" role="status">
+        <span class="loading-spinner" aria-hidden="true"></span>
+        <p>İçerikler hazırlanıyor...</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Alt Bilgi (Footer): JSON'dan beslenen sosyal medya ve iletişim bilgileri -->
+  <footer id="site-footer" class="site-footer"></footer>
+
+  <!-- Uygulama Mantığı -->
+  <script src="app.js" defer></script>
+</body>
+</html>

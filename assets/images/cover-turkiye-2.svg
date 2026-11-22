@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Demografi, Kentleşme ve Deprem Dirençli Şehirler Grafiği">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1911"/>
+      <stop offset="55%" stop-color="#102218"/>
+      <stop offset="100%" stop-color="#12261B"/>
+    </linearGradient>
+    <pattern id="dots2" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.3" fill="#1E3A2A"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bgGrad2)"/>
+  <rect width="1200" height="630" fill="url(#dots2)"/>
+
+  <!-- Concentric structural resilience rings -->
+  <g transform="translate(860, 325)" fill="none">
+    <circle r="215" stroke="#1E3A2A" stroke-width="1.5" stroke-dasharray="6 6"/>
+    <circle r="165" stroke="#84A98C" stroke-opacity="0.35" stroke-width="1.5"/>
+    <circle r="115" stroke="#4ADE80" stroke-opacity="0.45" stroke-width="2"/>
+    <circle r="62" fill="#12261B" stroke="#4ADE80" stroke-width="2.5"/>
+    <circle r="12" fill="#4ADE80"/>
+    <!-- Radial city blocks -->
+    <rect x="-150" y="-12" width="32" height="24" rx="4" fill="#12261B" stroke="#84A98C" stroke-width="1.5"/>
+    <rect x="118" y="-12" width="32" height="24" rx="4" fill="#12261B" stroke="#84A98C" stroke-width="1.5"/>
+    <rect x="-16" y="-150" width="32" height="24" rx="4" fill="#12261B" stroke="#4ADE80" stroke-width="1.5"/>
+    <rect x="-16" y="126" width="32" height="24" rx="4" fill="#12261B" stroke="#4ADE80" stroke-width="1.5"/>
+  </g>
+
+  <!-- Stylized city skyline & seismic wave line -->
+  <g transform="translate(72, 265)" fill="#12261B" stroke="#1E3A2A" stroke-width="1.8">
+    <rect x="0" y="100" width="48" height="140" rx="4"/>
+    <rect x="60" y="60" width="56" height="180" rx="4"/>
+    <rect x="128" y="20" width="64" height="220" rx="4" stroke="#4ADE80" stroke-opacity="0.7"/>
+    <rect x="204" y="80" width="52" height="160" rx="4"/>
+    <rect x="268" y="45" width="60" height="195" rx="4"/>
+    <rect x="340" y="110" width="48" height="130" rx="4"/>
+    <rect x="400" y="70" width="56" height="170" rx="4"/>
+  </g>
+
+  <!-- Seismic baseline -->
+  <path d="M 72 505 L 220 505 L 245 480 L 268 532 L 292 455 L 315 545 L 340 492 L 365 505 L 550 505" fill="none" stroke="#4ADE80" stroke-width="2.5" stroke-linejoin="round"/>
+
+  <!-- Header Labels -->
+  <rect x="72" y="68" width="276" height="36" rx="18" fill="#12261B" stroke="#1E3A2A" stroke-width="1.5"/>
+  <circle cx="94" cy="86" r="5" fill="#4ADE80"/>
+  <text x="112" y="91" fill="#84A98C" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="600" letter-spacing="1.4">KENTLEŞME VE YAPISAL DİRENÇ</text>
+
+  <text x="72" y="156" fill="#E8EFEA" font-family="Georgia, serif" font-size="40" font-weight="700">Marmara Yoğunluğu ve</text>
+  <text x="72" y="206" fill="#E8EFEA" font-family="Georgia, serif" font-size="40" font-weight="700">Anadolu'ya Dağıtık Gelişim</text>
+
+  <text x="72" y="568" fill="#A3B8AC" font-family="Inter, Arial, sans-serif" font-size="17">Nüfus dağılımı • Lojistik merkezlerin kaydırılması • Dirençli yapı stoku</text>
+</svg>
