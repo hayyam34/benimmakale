@@ -1,11 +1,40 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="tr" data-theme="green" data-text-size="standard" data-reader-width="standard">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0B1911">
+  <meta name="theme-color" content="#0B1911" id="meta-theme-color">
   <meta name="description" content="Türkiye gerçekleri ve gelecek vizyonlu mega projeler üzerine kişisel makale ve araştırma arşivi.">
   <title>Arşiv &amp; Perspektif</title>
+
+  <!-- Galata Kulesi Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon-galata.svg">
+
+  <!-- İlk boyamada tema ve okuma tercihlerini yükle (varsayılan: green / yeşil) -->
+  <script>
+    (function () {
+      var validThemes = { green: '#0B1911', dark: '#090A0D', light: '#F6F8F7', gray: '#222428' };
+      var savedTheme = null;
+      var savedSize = null;
+      var savedWidth = null;
+      try {
+        savedTheme = localStorage.getItem('site-theme');
+        savedSize = localStorage.getItem('reader-text-size');
+        savedWidth = localStorage.getItem('reader-width');
+      } catch (e) {}
+      var theme = savedTheme && validThemes[savedTheme] ? savedTheme : 'green';
+      var root = document.documentElement;
+      root.dataset.theme = theme;
+      if (savedSize === 'small' || savedSize === 'standard' || savedSize === 'large') {
+        root.dataset.textSize = savedSize;
+      }
+      if (savedWidth === 'standard' || savedWidth === 'wide') {
+        root.dataset.readerWidth = savedWidth;
+      }
+      var meta = document.getElementById('meta-theme-color');
+      if (meta) meta.setAttribute('content', validThemes[theme]);
+    })();
+  </script>
 
   <!-- Google Fonts: Başlıklar için Lora, gövde metni için Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,9 +45,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Üst Başlık ve Navigasyon Alanı -->
+  <!-- Üst Başlık, Navigasyon ve Sağ Üst Tema Seçici -->
   <header class="site-header">
-    <div class="container header-inner">
+    <div class="header-inner">
       <div class="brand-group">
         <a href="#/" id="site-brand" class="site-brand">
           <span class="brand-dot" aria-hidden="true"></span>
@@ -27,8 +56,28 @@
         <p id="site-subtitle" class="site-subtitle">Yükleniyor...</p>
       </div>
 
-      <!-- Dinamik Kategori Navigasyonu -->
+      <!-- Dinamik Kategori Navigasyonu (Üst Orta) -->
       <nav id="site-nav" class="site-nav" aria-label="Ana menü"></nav>
+
+      <!-- Sağ Üst Köşe Tema Seçici (Varsayılan: Yeşil) -->
+      <div id="theme-switcher" class="theme-switcher" role="group" aria-label="Tema görünümü">
+        <button type="button" class="theme-btn" data-theme-choice="green" aria-pressed="true" title="Yeşil tema (Varsayılan)">
+          <span class="theme-swatch theme-swatch-green" aria-hidden="true"></span>
+          <span>Yeşil</span>
+        </button>
+        <button type="button" class="theme-btn" data-theme-choice="dark" aria-pressed="false" title="Karanlık mod">
+          <span class="theme-swatch theme-swatch-dark" aria-hidden="true"></span>
+          <span>Karanlık</span>
+        </button>
+        <button type="button" class="theme-btn" data-theme-choice="light" aria-pressed="false" title="Parlak mod">
+          <span class="theme-swatch theme-swatch-light" aria-hidden="true"></span>
+          <span>Parlak</span>
+        </button>
+        <button type="button" class="theme-btn" data-theme-choice="gray" aria-pressed="false" title="Gri mod">
+          <span class="theme-swatch theme-swatch-gray" aria-hidden="true"></span>
+          <span>Gri</span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -42,10 +91,28 @@
     </div>
   </main>
 
-  <!-- Alt Bilgi (Footer): JSON'dan beslenen sosyal medya ve iletişim bilgileri -->
+  <!-- Alt Bilgi (Footer): JSON'dan beslenen sosyal medya, karekodlar ve iletişim bilgileri -->
   <footer id="site-footer" class="site-footer"></footer>
 
-  <!-- Uygulama Mantığı -->
+  <!-- Büyütülebilir Karekod (QR) Modal Penceresi -->
+  <div id="qr-modal" class="qr-modal" hidden role="dialog" aria-modal="true" aria-labelledby="qr-modal-title">
+    <div class="qr-modal-backdrop" data-qr-close></div>
+    <div class="qr-modal-card">
+      <div class="qr-modal-header">
+        <h3 id="qr-modal-title" class="qr-modal-title">Karekod</h3>
+        <button type="button" class="qr-modal-close" id="qr-modal-close" aria-label="Pencereyi kapat">✕</button>
+      </div>
+      <div id="qr-modal-body" class="qr-modal-body"></div>
+      <p id="qr-modal-value" class="qr-modal-value"></p>
+      <div class="qr-modal-actions">
+        <button type="button" id="qr-modal-copy" class="back-btn">Kopyala</button>
+        <a id="qr-modal-download" class="back-btn" href="#" download="karekod.svg">SVG İndir</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Karekod Üreticisi & Uygulama Mantığı -->
+  <script src="qr.js" defer></script>
   <script src="app.js" defer></script>
 </body>
 </html>

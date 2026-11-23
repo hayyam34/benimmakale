@@ -2,17 +2,29 @@
 
 Hiçbir derleme (build) aracı, Node.js veya harici kütüphane gerektirmeyen; saf **HTML5**, **CSS3** ve **Vanilla JavaScript (JSON tabanlı)** ile hazırlanmış kişisel makale ve proje arşivi web sitesi. **GitHub Pages** ve **Cloudflare Pages** üzerinde doğrudan statik dosya olarak çalışır.
 
+## Özellikler
+
+- **4 Renk Teması (Sağ Üst Köşe):** Varsayılan olarak **Yeşil** (`Dark Botanical Green`) açılır; kullanıcı isterse sağ üst köşeden **Karanlık**, **Parlak** veya **Gri** moda geçebilir. Seçim `localStorage` üzerinde hatırlanır.
+- **Vikipedi Tarzı Görünüm Paneli:** Makale sayfalarının yanında (mobil ve tablette makale üzerinde açılır panel olarak) **Metin** (`Küçük`, `Ölçünlü`, `Büyük`) ve **Genişlik** (`Ölçünlü`, `Geniş`) ayarları yer alır.
+- **Sesli Dinleme:** Her makalenin altında tarayıcının yerleşik `Web Speech API` altyapısını kullanan Türkçe sesli okuma oynatıcısı (`Oynat / Duraklat / Durdur` ve `0.85x – 1.5x` hız kontrolü) bulunur.
+- **Karekod (QR) Desteği:** Footer bölümündeki **Sosyal Medya** ve **İletişim & Kanallar** öğeleri için harici kütüphanesiz `qr.js` modülü ile otomatik SVG karekod üretilir; her öğenin yanındaki karekod tuşuyla büyütülebilir, indirilebilir veya **"Tüm Karekodları Göster"** butonuyla toplu olarak açılabilir.
+- **Hashtagler & Etiket Sayfası:** Makalelerin altında `#hashtag` etiketleri yer alır; tıklandığında ilgili etikete sahip makaleler `#etiket/<etiket>` görünümünde listelenir.
+- **Kaynaklar Bölümü:** Her makalenin altında numaralandırılmış referans ve bağlantı listesi gösterilir.
+- **İki Yana Yaslı (Justify) Tipografi & Responsive Tasarım:** Tüm metin blokları yaslı hizalanır; PC, tablet ve telefon ekranlarına tam uyumludur.
+- **Galata Kulesi Favicon:** Tarayıcı sekmesi için özel vektörel [favicon-galata.svg](assets/images/favicon-galata.svg) ikonu eklenmiştir.
+
 ## Klasör ve Dosya Yapısı
 
 ```text
 kisisel-makale-sitesi/
-├── index.html             # Ana sayfa ve SPA iskeleti
-├── style.css              # Dark Botanical Green tema ve responsive stiller
-├── app.js                 # JSON yükleyici, hash router ve blok render motoru
+├── index.html             # Ana sayfa, tema seçici, QR modal ve SPA iskeleti
+├── style.css              # 4 tema paleti, yaslı tipografi ve responsive stiller
+├── qr.js                  # Çevrimdışı ISO/IEC 18004 SVG karekod üreticisi
+├── app.js                 # JSON yükleyici, hash router, sesli okuma ve render motoru
 ├── data/
-│   └── content.json       # Tüm site ayarları, kategoriler, makaleler ve footer verisi
+│   └── content.json       # Site ayarları, kategoriler, makaleler, etiketler, kaynaklar ve footer
 ├── assets/
-│   └── images/            # Makale kapak görselleri ve içerik içi resimler
+│   └── images/            # Galata Kulesi favicon, kapak görselleri ve isteğe bağlı özel QR görselleri
 └── README.md              # Kullanım ve içerik ekleme rehberi
 ```
 
@@ -36,11 +48,11 @@ Ardından tarayıcıda `http://localhost:8000` adresine gidin.
 
 ## İçerik Yönetimi (`data/content.json`)
 
-Site üzerindeki tüm kategoriler, makaleler, sosyal medya linkleri ve iletişim bilgileri `data/content.json` dosyasından yönetilir.
+Site üzerindeki tüm kategoriler, makaleler, etiketler, kaynaklar, sosyal medya linkleri ve iletişim bilgileri `data/content.json` dosyasından yönetilir.
 
 ### 1. Yeni Kategori Ekleme
 
-`data/content.json` içindeki `"categories"` dizisine yeni bir obje eklediğinizde, yeni kategori hem üst menüde hem de ana sayfada otomatik olarak görünür:
+`data/content.json` içindeki `"categories"` dizisine yeni bir obje eklediğinizde, yeni kategori üst navigasyon menüsünde otomatik olarak görünür:
 
 ```json
 {
@@ -51,11 +63,10 @@ Site üzerindeki tüm kategoriler, makaleler, sosyal medya linkleri ve iletişim
 }
 ```
 - `id`: URL hash adresinde (`#kategori/teknoloji-notlari`) kullanılacak benzersiz kimlik (Türkçe karakter ve boşluk kullanmayın).
-- `icon`: `"compass"`, `"layers"` veya `"folder"` değerlerinden birini seçebilirsiniz.
 
 ---
 
-### 2. Yeni Makale Ekleme
+### 2. Yeni Makale Ekleme (Hashtag ve Kaynaklar Dahil)
 
 `data/content.json` içindeki `"articles"` dizisine yeni bir obje ekleyin. Uygulama makaleleri `date` alanına göre **otomatik olarak yeniden eskiye** sıralar; JSON içindeki sıranın önemi yoktur.
 
@@ -64,11 +75,12 @@ Site üzerindeki tüm kategoriler, makaleler, sosyal medya linkleri ve iletişim
   "slug": "ornek-yeni-makale",
   "categoryId": "turkiye-gercekleri",
   "title": "Yeni Makale Başlığı",
-  "date": "2026-11-22",
+  "date": "2026-11-23",
   "readingTime": "5 dk okuma",
   "summary": "Kategori listesinde ve makale girişinde görünecek kısa özet metni.",
   "coverImage": "assets/images/ornek-kapak.png",
   "coverAlt": "Kapak görseli için erişilebilirlik açıklaması",
+  "tags": ["Analiz", "TürkiyeGerçekleri", "Veri"],
   "blocks": [
     {
       "type": "paragraph",
@@ -94,6 +106,13 @@ Site üzerindeki tüm kategoriler, makaleler, sosyal medya linkleri ve iletişim
       "videoId": "aqz-KE-bpKQ",
       "caption": "İlgili YouTube videosu açıklaması."
     }
+  ],
+  "references": [
+    {
+      "title": "Örnek Kurum Raporu (2026)",
+      "url": "https://ornek-kaynak.org/rapor",
+      "note": "Verilerin alındığı temel kaynak açıklaması."
+    }
   ]
 }
 ```
@@ -108,11 +127,14 @@ Site üzerindeki tüm kategoriler, makaleler, sosyal medya linkleri ve iletişim
 
 ---
 
-### 3. Sosyal Medya ve İletişim Bilgilerini Güncelleme
+### 3. Sosyal Medya, İletişim ve Karekod (QR) Ayarları
 
-`data/content.json` içindeki `"footer"` bölümünü düzenleyerek alt bilgiyi güncelleyebilirsiniz:
-- `"socials"`: `icon` değeri olarak `"github"`, `"x"`, `"youtube"`, `"linkedin"` veya `"link"` kullanılabilir.
-- `"contact"`: `"copyable": true` olarak işaretlenen alanlar (ör. **Session ID**), ziyaretçilerin tek tıkla panoya kopyalayabileceği bir buton olarak render edilir.
+`data/content.json` içindeki `"footer"` bölümünde:
+- `"socials"`: Her öğe için otomatik karekod oluşturulur (`"qr": false` diyerek kapatılabilir).
+- `"contact"`: `"qr": true` verilen öğeler (ör. **E-posta** ve **Session ID**) için karekod üretilir. `"copyable": true` alanı ise tek tıkla panoya kopyalama butonu ekler.
+- İsteğe bağlı alanlar:
+  - `"qrValue"`: Karekod içinde linkten/değerden farklı bir metin kodlamak isterseniz kullanabilirsiniz.
+  - `"qrImage"`: Otomatik SVG yerine kendi PNG/SVG karekod görselinizi göstermek isterseniz dosya yolunu (`"assets/images/session-qr.png"`) verebilirsiniz.
 
 ---
 
