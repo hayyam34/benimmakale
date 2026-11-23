@@ -1,9 +1,9 @@
 {
   "site": {
-    "title": "Arşiv & Perspektif",
+    "title": "BENİM Partisi",
     "bannerTitle": "Birlik Emek Nizam İlerleme ve Mutluluk Partisi",
-    "subtitle": "Stratejik Analizler, Türkiye Gerçekleri ve Gelecek Vizyonlu Mega Projeler",
-    "author": "Kişisel Araştırma & Tasarım Notları",
+    "subtitle": "Çağdaş Medeniyetlerin Üstüne Çıkma Hikayesi",
+    "author": "Kolektif Beyin Fırtıması",
     "copyright": "© 2026 Arşiv & Perspektif. Açık kaynak statik mimari ile hazırlanmıştır.",
     "registrationForm": {
       "label": "Kayıt Formu",
@@ -15,315 +15,27 @@
     {
       "id": "turkiye-gercekleri",
       "title": "Türkiye Gerçekleri",
-      "description": "Coğrafya, demografi, doğal kaynaklar ve yapısal meseleler üzerine veriye dayalı derinlikli incelemeler.",
-      "icon": "compass"
+      "description": "Coğrafya, demografi, doğal kaynaklar ve yapısal meseleler üzerine veriye dayalı derinlikli incelemeler."
     },
     {
       "id": "mega-projelerim",
       "title": "Mega Projelerim",
-      "description": "Ulaşım, enerji, su yönetimi ve kendi kendine yeten ekosistemler üzerine kapsamlı mühendislik ve vizyon tasarımları.",
-      "icon": "layers"
-    }
-  ],
-  "articles": [
-    {
-      "slug": "turkiye-su-stresi-ve-havza-yonetimi",
-      "categoryId": "turkiye-gercekleri",
-      "title": "Türkiye'nin Su Stresi Eşiği ve 25 Havzada Yapısal Dönüşüm İhtiyacı",
-      "date": "2026-10-15",
-      "readingTime": "6 dk okuma",
-      "summary": "Kişi başına düşen kullanılabilir su miktarındaki gerileme, tarımsal sulama kayıpları ve kapalı devre havza yönetiminin neden ertelenemez bir güvenlik meselesi olduğu üzerine analiz.",
-      "coverImage": "assets/images/cover-turkiye-1.svg",
-      "coverAlt": "Türkiye su havzaları ve hidroloji analiz grafiği",
-      "tags": [
-        "SuYönetimi",
-        "Hidroloji",
-        "HavzaAnalizi",
-        "İklim",
-        "TürkiyeGerçekleri"
-      ],
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "Türkiye coğrafyası, sanılanın aksine su zengini bir ülke değildir. Yıllık yaklaşık 112 milyar metreküplük teknik ve ekonomik olarak kullanılabilir su potansiyeli, artan nüfus ve düzensizleşen yağış rejimleri nedeniyle kişi başına düşen su miktarını kritik eşik olan 1.300 metreküp sınırına yaklaştırmıştır."
-        },
-        {
-          "type": "heading",
-          "text": "Tarımsal Sulamada Kayıp Oranları ve Vahşi Sulama"
-        },
-        {
-          "type": "paragraph",
-          "text": "Toplam tatlı su tüketiminin yaklaşık %74'ünün tarımda kullanıldığı bir düzende, açık kanal iletim hatlarındaki buharlaşma ve salma sulama yöntemleri en büyük verimlilik açığını oluşturmaktadır. Kapalı basınçlı boru sistemlerine ve sensör destekli damla sulamaya geçiş yapılmadan baraj kapasitelerini artırmak tek başına kalıcı çözüm sunmamaktadır."
-        },
-        {
-          "type": "image",
-          "src": "assets/images/cover-turkiye-1.svg",
-          "alt": "25 Su Havzası Hidroloji ve Potansiyel Dengesi",
-          "caption": "Şekil 1: Havza bazlı kullanılabilir su potansiyeli ve sektörel dağılım öngörüsü."
-        },
-        {
-          "type": "heading",
-          "text": "Yeraltı Akiferlerinin Korunması ve Atık Su Geri Kazanımı"
-        },
-        {
-          "type": "paragraph",
-          "text": "Özellikle Konya Kapalı Havzası ve Ergene Havzası gibi kritik bölgelerde ruhsatsız yeraltı su çekimleri obruk oluşumunu hızlandırmaktadır. Arıtılmış kentsel ve endüstriyel suların yeniden tarım ve sanayi soğutma döngülerine kazandırılması, 2035 projeksiyonunda su kıtlığını önlemenin en hızlı yoludur."
-        },
-        {
-          "type": "youtube",
-          "videoId": "aqz-KE-bpKQ",
-          "caption": "Video Analiz: Havza ölçeğinde su döngüsü simülasyonu ve akıllı altyapı modelleri (örnek yerleştirme)."
-        }
-      ],
-      "references": [
-        {
-          "title": "Devlet Su İşleri (DSİ) — Türkiye Su Potansiyeli ve Havza İstatistikleri",
-          "url": "https://www.dsi.gov.tr/",
-          "note": "Yıllık 112 milyar m³ kullanılabilir su potansiyeli ve sektörel tüketim oranları."
-        },
-        {
-          "title": "T.C. Tarım ve Orman Bakanlığı Su Yönetimi Genel Müdürlüğü — 25 Nehir Havzası Planları",
-          "url": "https://www.tarimorman.gov.tr/SYGM",
-          "note": "Havza bazlı kuraklık yönetimi ve akifer koruma eylem planları."
-        },
-        {
-          "title": "FAO AQUASTAT — Türkiye Tatlı Su Çekimi ve Tarımsal Sulama Göstergeleri",
-          "url": "https://www.fao.org/aquastat/",
-          "note": "Küresel su stresi indeksleri ve kişi başı yenilenebilir su kaynakları karşılaştırması."
-        }
-      ]
-    },
-    {
-      "slug": "marmara-yogunlugu-ve-anadoluya-dagitik-gelisim",
-      "categoryId": "turkiye-gercekleri",
-      "title": "Marmara Aşırı Yoğunluğu ve Anadolu'ya Dağıtık Kentleşme Zorunluluğu",
-      "date": "2026-11-18",
-      "readingTime": "7 dk okuma",
-      "summary": "Nüfusun ve sanayi üretiminin tek bir sismik kuşak üzerinde yoğunlaşmasının yarattığı stratejik riskler ile Anadolu koridorlarında yeni cazibe merkezleri oluşturma modeli.",
-      "coverImage": "assets/images/cover-turkiye-2.svg",
-      "coverAlt": "Marmara yoğunluğu ve deprem dirençli kentleşme grafiği",
-      "tags": [
-        "Kentleşme",
-        "DepremDirenci",
-        "Demografi",
-        "Marmara",
-        "TürkiyeGerçekleri"
-      ],
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "Türkiye ekonomisinin neredeyse yarısı ve toplam nüfusun önemli bir bölümü, birinci derece aktif fay hatlarının geçtiği Marmara Bölgesi'nde toplanmıştır. Bu aşırı merkezileşme yalnızca olası bir büyük deprem anında ulusal tedarik zincirini kilitleme riski taşımakla kalmıyor; aynı zamanda konut, ulaşım ve temiz hava maliyetlerini de sürdürülemez seviyelere çıkarıyor."
-        },
-        {
-          "type": "heading",
-          "text": "Lojistik Merkezlerin ve Sanayi Kümelerinin Kaydırılması"
-        },
-        {
-          "type": "paragraph",
-          "text": "Marmara'daki yükü hafifletmenin yolu idari yasaklardan değil, Anadolu'daki ikincil şehirleri yüksek hızlı yük demiryolları ve liman bağlantılarıyla küresel ticarete entegre etmekten geçer. Eskişehir, Kayseri, Gaziantep, Samsun ve Konya ekseninde kurulacak düşük sismik riskli teknoloji ve üretim vadileri, gönüllü tersine göçü tetikleyebilir."
-        },
-        {
-          "type": "image",
-          "src": "assets/images/cover-turkiye-2.svg",
-          "alt": "Dirençli Kentleşme ve Sismik Risk Dengeleme Diyagramı",
-          "caption": "Şekil 1: Çok merkezli kentleşme ve sismik riskin coğrafi olarak dağıtılması modeli."
-        },
-        {
-          "type": "heading",
-          "text": "Dirençli Yapı Stoku ve Mikrobölgeleme"
-        },
-        {
-          "type": "paragraph",
-          "text": "Yeni yerleşim alanları planlanırken alüvyon tarım ovaları yerine sağlam kaya zeminli yamaçların tercih edilmesi, zemin-yapı etkileşiminin zorunlu dijital ikizlerle denetlenmesi gerekmektedir."
-        },
-        {
-          "type": "youtube",
-          "videoId": "https://www.youtube.com/embed/YE7VzlLtp-4",
-          "caption": "Video İnceleme: Sismik dirençli şehir planlaması ve modüler yapı teknolojileri (örnek embed URL formatı)."
-        }
-      ],
-      "references": [
-        {
-          "title": "TÜİK — Adrese Dayalı Nüfus Kayıt Sistemi ve Bölgesel GSYH Dağılımı",
-          "url": "https://data.tuik.gov.tr/",
-          "note": "Marmara Bölgesi nüfus yoğunluğu ve ulusal üretim payı verileri."
-        },
-        {
-          "title": "AFAD — Türkiye Deprem Tehlike Haritası ve Sismik Mikrobölgeleme İlkeleri",
-          "url": "https://tdth.afad.gov.tr/",
-          "note": "Aktif fay zonları, zemin büyütme katsayıları ve yapısal risk sınıflandırması."
-        },
-        {
-          "title": "UN-Habitat — Dirençli Şehirler ve Çok Merkezli Mekansal Planlama Rehberi",
-          "url": "https://unhabitat.org/",
-          "note": "Mega kentlerin yükünü hafifleten bölgesel gelişim koridoru modelleri."
-        }
-      ]
-    },
-    {
-      "slug": "anadolu-cift-katmanli-lojistik-ve-hvdc-koridoru",
-      "categoryId": "mega-projelerim",
-      "title": "Anadolu Çift Katmanlı Yüksek Hızlı Lojistik ve HVDC Enerji Koridoru",
-      "date": "2026-09-22",
-      "readingTime": "8 dk okuma",
-      "summary": "Doğu Anadolu ve İç Anadolu'nun yüksek güneş-rüzgar potansiyelini batıdaki sanayi ve limanlara sıfıra yakın kayıpla aktaran, aynı güzergahta otonom raylı yük taşıyan entegre altyapı projesi.",
-      "coverImage": "assets/images/cover-mega-1.svg",
-      "coverAlt": "Anadolu Lojistik ve HVDC Enerji Koridoru teknik şeması",
-      "tags": [
-        "MegaProjeler",
-        "HVDC",
-        "RaylıLojistik",
-        "EnerjiKoridoru",
-        "Mühendislik"
-      ],
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "Türkiye'nin en büyük yapısal paradokslarından biri, yenilenebilir enerji üretim potansiyelinin (güneş, hidroelektrik ve rüzgar) doğu ve iç bölgelerde yoğunlaşmasına karşın, enerji tüketiminin ağırlıklı olarak batı kıyılarında gerçekleşmesidir. Öte yandan doğu-batı aksındaki ağır yük taşımacılığı hâlâ büyük ölçüde fosil yakıtlı karayolu tırlarına bağımlıdır."
-        },
-        {
-          "type": "heading",
-          "text": "Tek Kamulaştırma Hattında İki Stratejik Omurga"
-        },
-        {
-          "type": "paragraph",
-          "text": "Bu mega proje önerisi, Ege limanlarından İç Anadolu lojistik üssüne ve oradan Doğu enerji havzasına uzanan 1.450 kilometrelik tek bir altyapı koridoru içinde iki sistemi birleştirir: Üst katmanda saatte 250 km hıza çıkabilen elektrikli otonom konteyner trenleri, yeraltı tünel yatağında ise 12 GW kapasiteli Yüksek Gerilim Doğru Akım (HVDC) süper iletim kabloları."
-        },
-        {
-          "type": "image",
-          "src": "assets/images/cover-mega-1.svg",
-          "alt": "Anadolu Mag-Rail ve HVDC Koridor Şeması",
-          "caption": "Şekil 1: Limanlar, lojistik merkezler ve yenilenebilir enerji üsleri arasındaki çift katmanlı bağlantı."
-        },
-        {
-          "type": "heading",
-          "text": "Ekonomik Etki ve Karbon Ayak İzi Kazanımı"
-        },
-        {
-          "type": "paragraph",
-          "text": "Karayolu taşımacılığının %68 oranında raylı sisteme kaydırılmasıyla yıllık milyarlarca dolarlık akaryakıt ithalatının önüne geçilebilir. Ayrıca trenlerin rejeneratif frenleme enerjisi doğrudan koridor üzerindeki batarya depolama istasyonlarına geri beslenerek şebeke kararlılığına katkı sağlar."
-        },
-        {
-          "type": "youtube",
-          "videoId": "aqz-KE-bpKQ",
-          "caption": "Konsept Sunum: Yüksek hızlı elektrikli yük koridorları ve akıllı şebeke entegrasyonu."
-        }
-      ],
-      "references": [
-        {
-          "title": "ENTSO-E — Uzun Mesafe HVDC İletim Koridorları ve Şebeke Kararlılığı Raporu",
-          "url": "https://www.entsoe.eu/",
-          "note": "Yüksek gerilim doğru akım hatlarında hat kayıplarının %3 altına indirilmesi."
-        },
-        {
-          "title": "TEİAŞ — Türkiye Elektrik İletim Ağı ve Yenilenebilir Entegrasyon Projeksiyonları",
-          "url": "https://www.teias.gov.tr/",
-          "note": "Doğu-batı enerji üretim ve tüketim dengesi teknik verileri."
-        },
-        {
-          "title": "UIC (Uluslararası Demiryolları Birliği) — Yüksek Hızlı Yük Koridorları Standartları",
-          "url": "https://uic.org/",
-          "note": "Otonom konteyner trenleri ve rejeneratif enerji geri kazanım mimarisi."
-        }
-      ]
-    },
-    {
-      "slug": "jeotermal-sera-kentleri-ve-kapali-devre-tarim",
-      "categoryId": "mega-projelerim",
-      "title": "Jeotermal Sera Kentleri: Kuraklıktan Bağımsız Kapalı Devre Tarım Havzaları",
-      "date": "2026-11-05",
-      "readingTime": "6 dk okuma",
-      "summary": "Büyük Menderes'ten İç Anadolu'daki jeotermal kuşaklara uzanan bölgede, %92 daha az su tüketen ve yılın 365 günü kesintisiz gıda üreten otonom biyo-kubbe yerleşimleri.",
-      "coverImage": "assets/images/cover-mega-2.svg",
-      "coverAlt": "Jeotermal sera kentleri mimari diyagramı",
-      "tags": [
-        "Jeotermal",
-        "AkıllıTarım",
-        "Hidroponik",
-        "GıdaGüvenliği",
-        "MegaProjeler"
-      ],
-      "blocks": [
-        {
-          "type": "paragraph",
-          "text": "İklim değişikliği nedeniyle açık tarla tarımı her yıl don, dolu ve aşırı kuraklık şoklarına maruz kalmaktadır. Türkiye'nin dünyanın en zengin jeotermal enerji kuşaklarından birinin üzerinde yer alması, tarımsal üretimi hava koşullarından tamamen bağımsız hale getirecek devrimci bir fırsat sunar."
-        },
-        {
-          "type": "heading",
-          "text": "Jeotermal Isı Döngüsü ve Yoğuşma ile Su Geri Kazanımı"
-        },
-        {
-          "type": "paragraph",
-          "text": "Tasarlanan Jeotermal Sera Kentleri, yeraltından çıkarılan sıcak akışkanı kapalı devre eşanjörlerle seraların kış ısıtmasında kullandıktan sonra re-enjeksiyon kuyularıyla tekrar yeraltına basar. Seraların içindeki nem yoğuşturma üniteleri sayesinde bitkilerin terlediği suyun %92'si toplanarak yeniden hidroponik besin solüsyonuna karıştırılır."
-        },
-        {
-          "type": "image",
-          "src": "assets/images/cover-mega-2.svg",
-          "alt": "Kapalı Devre Jeotermal Biyo-Kubbe Kesiti",
-          "caption": "Şekil 1: Yeraltı jeotermal döngüsü ile dikey hidroponik biyo-kubbelerin entegre çalışma prensibi."
-        },
-        {
-          "type": "heading",
-          "text": "Bölgesel İstihdam ve Sıfır Pestisit Hedefi"
-        },
-        {
-          "type": "paragraph",
-          "text": "Pozitif basınçlı ve filtreli hava kilitleriyle dış ortam zararlılarından tamamen izole edilen bu kubbelerde kimyasal pestisit kullanımına gerek kalmaz. Her bir sera kenti, çevresindeki kırsal nüfusu yüksek katma değerli tarım mühendisliği ve otomasyon teknisyenliği etrafında istihdam eden modern bir ekolojik merkez olarak çalışır."
-        },
-        {
-          "type": "youtube",
-          "videoId": "YE7VzlLtp-4",
-          "caption": "Proje Görselleştirme: Kapalı devre hidroponik üretim sistemleri ve jeotermal iklimlendirme."
-        }
-      ],
-      "references": [
-        {
-          "title": "MTA (Maden Tetkik ve Arama) — Türkiye Jeotermal Kaynaklar Envanteri",
-          "url": "https://www.mta.gov.tr/",
-          "note": "Büyük Menderes, Gediz ve İç Anadolu jeotermal kuşaklarının ısı potansiyeli."
-        },
-        {
-          "title": "Wageningen University & Research — Closed-Loop Greenhouse Water Recovery Systems",
-          "url": "https://www.wur.nl/",
-          "note": "Kapalı seralarda transpirasyon suyunun yoğuşturma ile geri kazanım verimliliği."
-        },
-        {
-          "title": "International Geothermal Association (IGA) — Direct Use in Agriculture",
-          "url": "https://www.geothermal-energy.org/",
-          "note": "Re-enjeksiyon standartları ve sürdürülebilir ısı eşanjörü tasarımları."
-        }
-      ]
+      "description": "Ulaşım, enerji, su yönetimi ve kendi kendine yeten ekosistemler üzerine kapsamlı mühendislik ve vizyon tasarımları."
     }
   ],
   "footer": {
     "about": "Bilimsel veriler, coğrafi gerçekler ve uzun vadeli mühendislik tasarımları üzerine bağımsız dijital arşiv.",
     "socials": [
       {
-        "platform": "GitHub",
-        "label": "GitHub",
-        "url": "https://github.com/kullanici-adiniz",
-        "icon": "github",
-        "qr": true
-      },
-      {
         "platform": "X",
         "label": "X (Twitter)",
         "url": "https://x.com/kullanici-adiniz",
-        "icon": "x",
         "qr": true
       },
       {
         "platform": "YouTube",
         "label": "YouTube",
         "url": "https://www.youtube.com/@kullanici-adiniz",
-        "icon": "youtube",
-        "qr": true
-      },
-      {
-        "platform": "LinkedIn",
-        "label": "LinkedIn",
-        "url": "https://www.linkedin.com/in/kullanici-adiniz",
-        "icon": "linkedin",
         "qr": true
       }
     ],
@@ -333,23 +45,21 @@
         "label": "E-posta",
         "value": "iletisim@ornek-alanadi.com",
         "href": "mailto:iletisim@ornek-alanadi.com",
-        "copyable": false,
+        "copyable": true,
         "qr": true
       },
       {
         "type": "session",
         "label": "Session ID",
         "value": "058f3a9d4c2e1b7a806f5d4e3c2b1a098f7e6d5c4b3a291807f6e5d4c3b2a1901b",
-        "href": "",
         "copyable": true,
         "qr": true
       },
       {
         "type": "location",
         "label": "Konum",
-        "value": "Ankara / Türkiye",
-        "href": "",
-        "copyable": false,
+        "value": "Türkiye",
+        "copyable": true,
         "qr": false
       }
     ]
