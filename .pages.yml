@@ -1,0 +1,167 @@
+media:
+  input: assets/images
+  output: /assets/images
+
+content:
+  - name: site_content
+    label: Site İçeriği
+    type: file
+    path: data/content.json
+    fields:
+      - name: site
+        label: Site
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: bannerTitle
+            label: Bannertitle
+            type: string
+          - name: subtitle
+            label: Subtitle
+            type: string
+          - name: author
+            label: Author
+            type: string
+          - name: copyright
+            label: Copyright
+            type: string
+          - name: registrationForm
+            label: Registrationform
+            type: object
+            fields:
+              - name: label
+                label: Label
+                type: string
+              - name: url
+                label: Url
+                type: string
+              - name: embedUrl
+                label: Embedurl
+                type: string
+      - name: categories
+        label: Categories
+        type: object
+        list: true
+        fields:
+          - name: id
+            label: İd
+            type: string
+          - name: title
+            label: Title
+            type: string
+          - name: description
+            label: Description
+            type: rich-text
+          - name: icon
+            label: İcon
+            type: image
+      - name: articles
+        label: Articles
+        type: object
+        list: true
+        fields:
+          - name: slug
+            label: Slug
+            type: string
+          - name: categoryId
+            label: Categoryıd
+            type: string
+          - name: title
+            label: Title
+            type: string
+          - name: date
+            label: Date
+            type: string
+          - name: readingTime
+            label: Readingtime
+            type: string
+          - name: summary
+            label: Summary
+            type: rich-text
+          - name: coverImage
+            label: Coverımage
+            type: image
+          - name: coverAlt
+            label: Coveralt
+            type: image
+          - name: tags
+            label: Tags
+            type: object
+            list: true
+          - name: blocks
+            label: Blocks
+            type: object
+            list: true
+            fields:
+              - name: type
+                label: Type
+                type: string
+              - name: text
+                label: Text
+                type: rich-text
+          - name: references
+            label: References
+            type: object
+            list: true
+            fields:
+              - name: title
+                label: Title
+                type: string
+              - name: url
+                label: Url
+                type: string
+              - name: note
+                label: Note
+                type: string
+      - name: footer
+        label: Footer
+        type: object
+        fields:
+          - name: about
+            label: About
+            type: string
+          - name: socials
+            label: Socials
+            type: object
+            list: true
+            fields:
+              - name: platform
+                label: Platform
+                type: string
+              - name: label
+                label: Label
+                type: string
+              - name: url
+                label: Url
+                type: string
+              - name: icon
+                label: İcon
+                type: image
+              - name: qr
+                label: Qr
+                type: boolean
+          - name: contact
+            label: Contact
+            type: object
+            list: true
+            fields:
+              - name: type
+                label: Type
+                type: string
+              - name: label
+                label: Label
+                type: string
+              - name: value
+                label: Value
+                type: string
+              - name: href
+                label: Href
+                type: string
+              - name: copyable
+                label: Copyable
+                type: boolean
+              - name: qr
+                label: Qr
+                type: boolean
