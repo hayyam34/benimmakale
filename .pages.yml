@@ -9,145 +9,152 @@ content:
     path: data/content.json
     fields:
       - name: site
-        label: Site
+        label: Genel Site Ayarları
         type: object
         fields:
           - name: title
-            label: Title
+            label: Site Başlığı
             type: string
           - name: bannerTitle
-            label: Bannertitle
+            label: Üst Bant Başlığı
             type: string
           - name: subtitle
-            label: Subtitle
+            label: Alt Başlık
             type: string
           - name: author
-            label: Author
+            label: Yazar Adı
             type: string
           - name: copyright
-            label: Copyright
+            label: Telif Hakkı Metni
             type: string
           - name: registrationForm
-            label: Registrationform
+            label: Kayıt Formu Ayarları
             type: object
             fields:
               - name: label
-                label: Label
+                label: Buton Etiketi
                 type: string
               - name: url
-                label: Url
+                label: Form Bağlantısı (URL)
                 type: string
               - name: embedUrl
-                label: Embedurl
+                label: Gömülü Form Bağlantısı (Embed URL)
                 type: string
+
       - name: categories
-        label: Categories
+        label: Kategoriler
         type: object
         list: true
         fields:
           - name: id
-            label: İd
+            label: Kategori Kimliği (ID)
             type: string
           - name: title
-            label: Title
+            label: Kategori Adı
             type: string
           - name: description
-            label: Description
+            label: Kategori Açıklaması
             type: rich-text
           - name: icon
-            label: İcon
+            label: Kategori İkonu
             type: string
+
       - name: articles
-        label: Articles
+        label: Makaleler
         type: object
         list: true
         fields:
           - name: slug
-            label: Slug
+            label: URL Kısa Adı (Slug)
             type: string
           - name: categoryId
-            label: Categoryıd
+            label: Kategori Seçimi
             type: select
             options:
               values:
                 - value: turkiye-gercekleri
-                  label: Türkiye Gerçekleri (turkiye-gercekleri)
+                  label: Türkiye Gerçekleri
                 - value: mega-projelerim
-                  label: Mega Projelerim (mega-projelerim)
+                  label: Mega Projelerim
           - name: title
-            label: Title
+            label: Makale Başlığı
             type: string
           - name: date
-            label: Date
+            label: Yayın Tarihi
             type: date
           - name: readingTime
-            label: Readingtime
+            label: Okuma Süresi
             type: string
           - name: summary
-            label: Summary
-            type: string
+            label: Kısa Özet
+            type: rich-text
           - name: coverImage
-            label: Coverımage
+            label: Kapak Görseli
             type: image
           - name: coverAlt
-            label: Coveralt
+            label: Kapak Görseli Açıklaması
             type: string
           - name: tags
-            label: Tags
+            label: Etiketler
             type: string
             list: true
           - name: blocks
-            label: Blocks
+            label: İçerik Blokları
             type: object
             list: true
             fields:
               - name: type
-                label: Type
+                label: Blok Türü
                 type: select
                 options:
                   values:
-                    - paragraph
-                    - heading
-                    - image
-                    - youtube
+                    - value: paragraph
+                      label: Paragraf
+                    - value: heading
+                      label: Alt Başlık
+                    - value: image
+                      label: Görsel
+                    - value: youtube
+                      label: YouTube Videosu
               - name: text
-                label: Text
+                label: Metin İçeriği
                 type: rich-text
               - name: src
-                label: Src
-                type: string
+                label: Görsel Dosyası
+                type: image
               - name: alt
-                label: Alt
+                label: Görsel Açıklaması
                 type: string
               - name: caption
-                label: Caption
+                label: Alt Yazı (Caption)
                 type: string
               - name: videoId
-                label: Videoıd
+                label: YouTube Video ID
                 type: string
           - name: references
-            label: References
+            label: Kaynakça
             type: object
             list: true
             fields:
               - name: title
-                label: Title
+                label: Kaynak Başlığı
                 type: string
               - name: url
-                label: Url
+                label: Kaynak Bağlantısı
                 type: string
               - name: note
-                label: Note
+                label: Açıklama / Not
                 type: string
+
       - name: footer
-        label: Footer
+        label: Alt Bilgi (Footer)
         type: object
         fields:
           - name: about
-            label: About
+            label: Hakkımda Metni
             type: string
           - name: socials
-            label: Socials
+            label: Sosyal Medya Hesapları
             type: object
             list: true
             fields:
@@ -160,54 +167,54 @@ content:
                     - X
                     - YouTube
                     - LinkedIn
-                    - github
-                    - twitter
-                    - x
-                    - linkedin
-                    - instagram
-                    - youtube
-                    - session
-                    - telegram
-                    - website
+                    - Instagram
+                    - Session
+                    - Telegram
+                    - Website
               - name: label
-                label: Label
+                label: Görünecek İsim
                 type: string
               - name: url
-                label: Url
+                label: Profil Bağlantısı
                 type: string
               - name: icon
-                label: İcon
+                label: İkon
                 type: string
               - name: qr
-                label: Qr
+                label: QR Kod Gösterilsin mi?
                 type: boolean
           - name: contact
-            label: Contact
+            label: İletişim Bilgileri
             type: object
             list: true
             fields:
               - name: type
-                label: Type
+                label: İletişim Türü
                 type: select
                 options:
                   values:
-                    - email
-                    - session
-                    - location
-                    - phone
-                    - link
+                    - value: email
+                      label: E-posta
+                    - value: session
+                      label: Session Adresi
+                    - value: location
+                      label: Konum
+                    - value: phone
+                      label: Telefon
+                    - value: link
+                      label: Web Bağlantısı
               - name: label
-                label: Label
+                label: İletişim Başlığı
                 type: string
               - name: value
-                label: Value
+                label: İletişim Değeri
                 type: string
               - name: href
-                label: Href
+                label: Tıklanabilir Bağlantı
                 type: string
               - name: copyable
-                label: Copyable
+                label: Kopyalanabilir Olsun mu?
                 type: boolean
               - name: qr
-                label: Qr
+                label: QR Kod Gösterilsin mi?
                 type: boolean
