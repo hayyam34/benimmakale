@@ -46,6 +46,10 @@
     x: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>',
     youtube: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>',
     linkedin: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>',
+    instagram: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>',
+    telegram: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>',
+    session: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>',
+    website: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
     link: '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>',
     qr: '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><path d="M14 14h3v3h-3z"/><path d="M17 17h4v4h-4z"/><path d="M14 20h1"/><path d="M20 14h1"/></svg>',
     volume: '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>',
@@ -80,6 +84,184 @@
       return trimmed;
     }
     return '#';
+  }
+
+  /**
+   * Pages CMS'in yazdığı kök-göreli "/assets/..." yollarını GitHub Pages alt klasörlerinde de
+   * sorunsuz çalışacak şekilde göreli "assets/..." yoluna normalize eder.
+   */
+  function resolveAssetUrl(url) {
+    const safe = sanitizeUrl(url);
+    if (safe.startsWith('/assets/')) {
+      return safe.slice(1);
+    }
+    return safe;
+  }
+
+  /** Sayısal veya metin okuma süresi değerini standart biçime çevirir */
+  function formatReadingTime(value) {
+    if (value === null || value === undefined) return '';
+    const trimmed = String(value).trim();
+    if (!trimmed) return '';
+    if (/^\d+$/.test(trimmed)) {
+      return `${trimmed} dk okuma`;
+    }
+    return trimmed;
+  }
+
+  /** Satır içi Markdown biçimlendirmesini XSS-güvenli HTML'e çevirir */
+  function formatInlineStyles(escapedText) {
+    return escapedText
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+      .replace(/__(.+?)__/g, '<strong>$1</strong>')
+      .replace(/\*(\S(?:.*?\S)?)\*/g, '<em>$1</em>');
+  }
+
+  function formatInlineMarkdown(rawLine) {
+    if (!rawLine) return '';
+    let out = escapeHtml(rawLine);
+
+    const codePlaceholders = [];
+    out = out.replace(/`([^`]+)`/g, (_, codeText) => {
+      const idx = codePlaceholders.push(`<code class="block-inline-code">${codeText}</code>`) - 1;
+      return `\u0000CODE${idx}\u0000`;
+    });
+
+    const linkPlaceholders = [];
+    out = out.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_, labelText, rawHref) => {
+      const unescapedHref = rawHref.replace(/&amp;/g, '&');
+      const safeHref = escapeHtml(sanitizeUrl(unescapedHref));
+      const formattedLabel = formatInlineStyles(labelText);
+      const idx =
+        linkPlaceholders.push(
+          `<a href="${safeHref}" target="_blank" rel="noopener noreferrer">${formattedLabel}</a>`
+        ) - 1;
+      return `\u0000LINK${idx}\u0000`;
+    });
+
+    out = formatInlineStyles(out);
+    out = out.replace(/\u0000LINK(\d+)\u0000/g, (_, idx) => linkPlaceholders[Number(idx)] || '');
+    out = out.replace(/\u0000CODE(\d+)\u0000/g, (_, idx) => codePlaceholders[Number(idx)] || '');
+
+    return out;
+  }
+
+  /** Başlık, paragraf, liste ve alıntı içeren Markdown metnini HTML bloklarına dönüştürür */
+  function renderMarkdown(markdownText) {
+    if (markdownText === null || markdownText === undefined) return '';
+    const lines = String(markdownText).split(/\r?\n/);
+    const htmlParts = [];
+    let paragraphBuf = [];
+    let ulBuf = [];
+    let olBuf = [];
+    let quoteBuf = [];
+
+    function flushParagraph() {
+      if (paragraphBuf.length === 0) return;
+      htmlParts.push(`<p class="block-paragraph">${formatInlineMarkdown(paragraphBuf.join(' '))}</p>`);
+      paragraphBuf = [];
+    }
+
+    function flushUl() {
+      if (ulBuf.length === 0) return;
+      htmlParts.push(
+        `<ul class="block-list">${ulBuf.map((item) => `<li>${formatInlineMarkdown(item)}</li>`).join('')}</ul>`
+      );
+      ulBuf = [];
+    }
+
+    function flushOl() {
+      if (olBuf.length === 0) return;
+      htmlParts.push(
+        `<ol class="block-list block-list-ordered">${olBuf.map((item) => `<li>${formatInlineMarkdown(item)}</li>`).join('')}</ol>`
+      );
+      olBuf = [];
+    }
+
+    function flushQuote() {
+      if (quoteBuf.length === 0) return;
+      htmlParts.push(`<blockquote class="block-quote">${formatInlineMarkdown(quoteBuf.join(' '))}</blockquote>`);
+      quoteBuf = [];
+    }
+
+    function flushAll() {
+      flushParagraph();
+      flushUl();
+      flushOl();
+      flushQuote();
+    }
+
+    for (const rawLine of lines) {
+      const trimmed = rawLine.trim();
+
+      if (!trimmed) {
+        flushAll();
+        continue;
+      }
+
+      const h3Match = trimmed.match(/^###\s+(.+)$/);
+      if (h3Match) {
+        flushAll();
+        htmlParts.push(`<h3 class="block-heading block-heading-sub">${formatInlineMarkdown(h3Match[1])}</h3>`);
+        continue;
+      }
+
+      const h2Match = trimmed.match(/^#{1,2}\s+(.+)$/);
+      if (h2Match) {
+        flushAll();
+        htmlParts.push(`<h2 class="block-heading">${formatInlineMarkdown(h2Match[1])}</h2>`);
+        continue;
+      }
+
+      const quoteMatch = trimmed.match(/^>\s?(.*)$/);
+      if (quoteMatch) {
+        flushParagraph();
+        flushUl();
+        flushOl();
+        quoteBuf.push(quoteMatch[1]);
+        continue;
+      }
+
+      const ulMatch = trimmed.match(/^[-*+]\s+(.+)$/);
+      if (ulMatch) {
+        flushParagraph();
+        flushOl();
+        flushQuote();
+        ulBuf.push(ulMatch[1]);
+        continue;
+      }
+
+      const olMatch = trimmed.match(/^\d+\.\s+(.+)$/);
+      if (olMatch) {
+        flushParagraph();
+        flushUl();
+        flushQuote();
+        olBuf.push(olMatch[1]);
+        continue;
+      }
+
+      flushUl();
+      flushOl();
+      flushQuote();
+      paragraphBuf.push(trimmed);
+    }
+
+    flushAll();
+    return htmlParts.join('');
+  }
+
+  /** Sesli okuma ve düz metin önizlemeleri için Markdown işaretlerini temizler */
+  function stripMarkdown(text) {
+    if (!text) return '';
+    return String(text)
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+      .replace(/^#{1,6}\s+/gm, '')
+      .replace(/^>\s?/gm, '')
+      .replace(/^\s*(?:[-*+]|\d+\.)\s+/gm, '')
+      .replace(/\*\*(.+?)\*\*/g, '$1')
+      .replace(/__(.+?)__/g, '$1')
+      .replace(/\*(\S(?:.*?\S)?)\*/g, '$1')
+      .replace(/`([^`]+)`/g, '$1');
   }
 
   /** Panoya metin kopyalama yardımcısı */
@@ -316,12 +498,12 @@
   /** Makale metnini tarayıcı sentezleyicisinin takılmaması için 220 karakterlik cümle parçalarına böler */
   function buildSpeechChunks(article) {
     const rawSections = [];
-    if (article.title) rawSections.push(article.title);
-    if (article.summary) rawSections.push(article.summary);
+    if (article.title) rawSections.push(stripMarkdown(article.title));
+    if (article.summary) rawSections.push(stripMarkdown(article.summary));
 
     (article.blocks || []).forEach((block) => {
       if ((block.type === 'heading' || block.type === 'paragraph') && block.text) {
-        rawSections.push(block.text);
+        rawSections.push(stripMarkdown(block.text));
       }
     });
 
@@ -503,7 +685,7 @@
 
   function generateQrMarkup(qrItem, displaySize) {
     if (qrItem.qrImage) {
-      return `<img src="${escapeHtml(sanitizeUrl(qrItem.qrImage))}" alt="${escapeHtml(qrItem.label)} Karekodu" width="${displaySize}" height="${displaySize}">`;
+      return `<img src="${escapeHtml(resolveAssetUrl(qrItem.qrImage))}" alt="${escapeHtml(qrItem.label)} Karekodu" width="${displaySize}" height="${displaySize}">`;
     }
     if (typeof window.QRCodeSVG !== 'undefined' && qrItem.qrValue) {
       try {
@@ -549,7 +731,7 @@
       }
       const safeName = String(item.label || 'karekod').toLowerCase().replace(/[^a-z0-9]+/gi, '-');
       if (item.qrImage) {
-        downloadLink.href = sanitizeUrl(item.qrImage);
+        downloadLink.href = resolveAssetUrl(item.qrImage);
         downloadLink.download = `${safeName}.png`;
         downloadLink.textContent = 'Görseli İndir';
       } else {
@@ -642,7 +824,8 @@
 
     const socialsHtml = (footerData.socials || [])
       .map((item) => {
-        const iconSvg = ICONS[item.icon] || ICONS.link;
+        const iconKey = String(item.icon || item.platform || '').trim().toLowerCase();
+        const iconSvg = ICONS[iconKey] || ICONS.link;
         const label = item.label || item.platform;
         const qrEnabled = item.qr !== false && (item.qrValue || item.url || item.qrImage);
         let qrBtnHtml = '';
@@ -694,6 +877,29 @@
           `;
         }
 
+        if (item.href) {
+          const safeHref = sanitizeUrl(item.href);
+          const externalAttrs = /^https?:\/\//i.test(safeHref) ? ' target="_blank" rel="noopener noreferrer"' : '';
+          const inlineCopyHtml = item.copyable
+            ? `
+              <button type="button" class="contact-qr-btn copy-btn-inline" data-copy-index="${idx}" title="Panoya kopyalamak için tıklayın">
+                <span id="copy-badge-${idx}">Kopyala</span>
+              </button>
+            `
+            : '';
+
+          return `
+            <li class="contact-item">
+              <span class="contact-label">${label}</span>
+              <div class="contact-actions-row">
+                <a class="contact-value" href="${escapeHtml(safeHref)}"${externalAttrs}>${value}</a>
+                ${inlineCopyHtml}
+                ${qrBtnHtml}
+              </div>
+            </li>
+          `;
+        }
+
         if (item.copyable) {
           return `
             <li class="contact-item">
@@ -703,18 +909,6 @@
                   <span class="copy-btn-code">${value}</span>
                   <span class="copy-badge" id="copy-badge-${idx}">Kopyala</span>
                 </button>
-                ${qrBtnHtml}
-              </div>
-            </li>
-          `;
-        }
-
-        if (item.href) {
-          return `
-            <li class="contact-item">
-              <span class="contact-label">${label}</span>
-              <div class="contact-actions-row">
-                <a class="contact-value" href="${escapeHtml(sanitizeUrl(item.href))}">${value}</a>
                 ${qrBtnHtml}
               </div>
             </li>
@@ -789,7 +983,7 @@
     `;
 
     // Kopyalama butonları
-    footerEl.querySelectorAll('.copy-btn').forEach((btn) => {
+    footerEl.querySelectorAll('.copy-btn, .copy-btn-inline').forEach((btn) => {
       btn.addEventListener('click', async () => {
         const index = Number(btn.getAttribute('data-copy-index'));
         const contactItem = (footerData.contact || [])[index];
@@ -840,7 +1034,7 @@
     const coverHtml = article.coverImage
       ? `
         <a href="${articleUrl}" class="article-card-media" tabindex="-1" aria-hidden="true">
-          <img src="${escapeHtml(sanitizeUrl(article.coverImage))}" alt="${escapeHtml(article.coverAlt || article.title)}" loading="lazy">
+          <img src="${escapeHtml(resolveAssetUrl(article.coverImage))}" alt="${escapeHtml(article.coverAlt || article.title)}" loading="lazy">
         </a>
       `
       : '';
@@ -849,8 +1043,9 @@
       ? `<a href="${categoryUrl}" class="meta-pill">${escapeHtml(categoryTitle)}</a>`
       : '';
 
-    const readingTimeHtml = article.readingTime
-      ? `<span>• ${escapeHtml(article.readingTime)}</span>`
+    const readingTimeLabel = formatReadingTime(article.readingTime);
+    const readingTimeHtml = readingTimeLabel
+      ? `<span>• ${escapeHtml(readingTimeLabel)}</span>`
       : '';
 
     return `
@@ -865,7 +1060,7 @@
           <h3 class="article-card-title">
             <a href="${articleUrl}">${escapeHtml(article.title)}</a>
           </h3>
-          <p class="article-card-summary">${escapeHtml(article.summary)}</p>
+          <p class="article-card-summary">${escapeHtml(stripMarkdown(article.summary))}</p>
           <div class="article-card-footer">
             <a href="${articleUrl}" class="read-more-link">
               <span>Devamını Oku</span>
@@ -944,7 +1139,7 @@
 
         <header class="category-hero">
           <h1 class="category-hero-title">${escapeHtml(category.title)}</h1>
-          <p class="category-hero-desc">${escapeHtml(category.description)}</p>
+          <p class="category-hero-desc">${formatInlineMarkdown(category.description)}</p>
           <div class="category-hero-stats">Toplam ${filteredArticles.length} makale • Tarihe göre yeniden eskiye sıralanmıştır</div>
         </header>
 
@@ -1001,7 +1196,7 @@
 
     switch (block.type) {
       case 'paragraph':
-        return `<p class="block-paragraph">${escapeHtml(block.text)}</p>`;
+        return renderMarkdown(block.text);
 
       case 'heading': {
         const isSub = Number(block.level) === 3;
@@ -1016,7 +1211,7 @@
           : '';
         return `
           <figure class="block-image">
-            <img src="${escapeHtml(sanitizeUrl(block.src))}" alt="${escapeHtml(block.alt || '')}" loading="lazy">
+            <img src="${escapeHtml(resolveAssetUrl(block.src))}" alt="${escapeHtml(block.alt || '')}" loading="lazy">
             ${captionHtml}
           </figure>
         `;
@@ -1127,14 +1322,15 @@
     const coverHtml = article.coverImage
       ? `
         <figure class="article-cover">
-          <img src="${escapeHtml(sanitizeUrl(article.coverImage))}" alt="${escapeHtml(article.coverAlt || article.title)}">
+          <img src="${escapeHtml(resolveAssetUrl(article.coverImage))}" alt="${escapeHtml(article.coverAlt || article.title)}">
         </figure>
       `
       : '';
 
     const blocksHtml = (article.blocks || []).map(renderArticleBlock).join('');
-    const readingTimeHtml = article.readingTime
-      ? `<span>• ${escapeHtml(article.readingTime)}</span>`
+    const readingTimeLabel = formatReadingTime(article.readingTime);
+    const readingTimeHtml = readingTimeLabel
+      ? `<span>• ${escapeHtml(readingTimeLabel)}</span>`
       : '';
 
     const tags = Array.isArray(article.tags) ? article.tags : [];
@@ -1204,7 +1400,7 @@
                 ${readingTimeHtml}
               </div>
               <h1 class="article-title">${escapeHtml(article.title)}</h1>
-              <p class="article-lead">${escapeHtml(article.summary)}</p>
+              <p class="article-lead">${formatInlineMarkdown(article.summary)}</p>
             </header>
 
             ${coverHtml}
