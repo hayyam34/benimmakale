@@ -179,6 +179,21 @@
       meta.setAttribute('content', THEMES[validTheme]);
     }
 
+    const tvTicker = document.getElementById('tv-market-ticker');
+    if (tvTicker) {
+      tvTicker.setAttribute('theme', validTheme === 'light' ? 'light' : 'dark');
+    }
+
+    const targetWidgetTheme = validTheme === 'light' ? 'light' : 'dark';
+    document.querySelectorAll('.glostats-iframe').forEach((frame) => {
+      const currentSrc = frame.getAttribute('src') || '';
+      if (!currentSrc) return;
+      const nextSrc = currentSrc.replace(/([?&]theme=)(dark|light)\b/i, `$1${targetWidgetTheme}`);
+      if (nextSrc !== currentSrc) {
+        frame.setAttribute('src', nextSrc);
+      }
+    });
+
     document.querySelectorAll('.theme-btn').forEach((btn) => {
       const isMatch = btn.getAttribute('data-theme-choice') === validTheme;
       btn.classList.toggle('is-active', isMatch);
@@ -585,13 +600,13 @@
      ======================================================================== */
 
   function renderHeader(activeHash) {
-    const site = state.data.site || {};
-    const titleEl = document.getElementById('site-title-text');
-    const subtitleEl = document.getElementById('site-subtitle');
-    const navEl = document.getElementById('site-nav');
+    const site = (state.data && state.data.site) || {};
+    const centerTitleEl = document.getElementById('header-center-title');
+    if (centerTitleEl && site.bannerTitle) {
+      centerTitleEl.textContent = site.bannerTitle;
+    }
 
-    if (titleEl) titleEl.textContent = site.title || 'Kişisel Arşiv';
-    if (subtitleEl) subtitleEl.textContent = site.subtitle || '';
+    const navEl = document.getElementById('site-nav');
 
     if (navEl) {
       const isHome = activeHash === '' || activeHash === '#' || activeHash === '#/';
@@ -605,6 +620,13 @@
           `<a href="#kategori/${encodeURIComponent(cat.id)}" class="nav-link ${isCatActive ? 'is-active' : ''}">${escapeHtml(cat.title)}</a>`
         );
       });
+
+      const regForm = (state.data.site && state.data.site.registrationForm) || {};
+      const formLabel = regForm.label || 'Kayıt Formu';
+      const isFormActive = activeHash === '#kayit-formu';
+      navItems.push(
+        `<a href="#kayit-formu" class="nav-link ${isFormActive ? 'is-active' : ''}">${escapeHtml(formLabel)}</a>`
+      );
 
       navEl.innerHTML = navItems.join('');
     }
@@ -1210,6 +1232,9 @@
                   <button type="button" class="audio-speed-btn is-active" data-speech-rate="1">1x</button>
                   <button type="button" class="audio-speed-btn" data-speech-rate="1.25">1.25x</button>
                   <button type="button" class="audio-speed-btn" data-speech-rate="1.5">1.5x</button>
+                  <button type="button" class="audio-speed-btn" data-speech-rate="2">2x</button>
+                  <button type="button" class="audio-speed-btn" data-speech-rate="2.5">2.5x</button>
+                  <button type="button" class="audio-speed-btn" data-speech-rate="3">3x</button>
                 </div>
               </div>
               <p id="audio-status-text" class="audio-status-text">Hazır</p>
@@ -1228,6 +1253,47 @@
           </article>
 
           ${renderAppearancePanelHtml()}
+        </div>
+      </div>
+    `;
+  }
+
+  /** Site içi Kayıt Formu görünümü (Google Forms embed + yeni sekme bağlantısı) */
+  function renderRegistrationFormView() {
+    const site = state.data.site || {};
+    const siteTitle = site.title || 'Arşiv';
+    const regForm = site.registrationForm || {};
+    const formLabel = regForm.label || 'Kayıt Formu';
+    const formUrl =
+      regForm.url ||
+      'https://docs.google.com/forms/d/e/1FAIpQLScH9OlP06UFAwXtvtwzQVX7EpDimr3YXLihJi1fcombUi7Qdg/viewform?usp=publish-editor';
+    const embedUrl =
+      regForm.embedUrl ||
+      'https://docs.google.com/forms/d/e/1FAIpQLScH9OlP06UFAwXtvtwzQVX7EpDimr3YXLihJi1fcombUi7Qdg/viewform?embedded=true';
+
+    document.title = `${formLabel} | ${siteTitle}`;
+
+    return `
+      <div class="container">
+        <div class="form-embed-section">
+          <div class="view-nav-bar">
+            <a href="#/" class="back-btn">
+              ${ICONS.arrowLeft}
+              <span>Ana Sayfaya Dön</span>
+            </a>
+            <a href="${escapeHtml(sanitizeUrl(formUrl))}" class="back-btn" target="_blank" rel="noopener noreferrer">
+              <span>Yeni Sekmede Aç ↗</span>
+            </a>
+          </div>
+
+          <div class="form-embed-card">
+            <iframe
+              class="embedded-form-frame"
+              src="${escapeHtml(sanitizeUrl(embedUrl))}"
+              title="${escapeHtml(formLabel)}"
+              loading="lazy"
+            >Yükleniyor…</iframe>
+          </div>
         </div>
       </div>
     `;
@@ -1271,6 +1337,8 @@
 
     if (normalizedHash === '#/' || normalizedHash === '') {
       viewHtml = renderHomeView();
+    } else if (normalizedHash === '#kayit-formu') {
+      viewHtml = renderRegistrationFormView();
     } else if (normalizedHash.startsWith('#kategori/')) {
       const catId = decodeURIComponent(normalizedHash.slice('#kategori/'.length));
       viewHtml = renderCategoryView(catId);

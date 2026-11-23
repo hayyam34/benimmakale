@@ -7,8 +7,8 @@
   <meta name="description" content="Türkiye gerçekleri ve gelecek vizyonlu mega projeler üzerine kişisel makale ve araştırma arşivi.">
   <title>Arşiv &amp; Perspektif</title>
 
-  <!-- Galata Kulesi Favicon -->
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon-galata.svg">
+  <!-- Site Favicon (Parti Logosu ile Aynı) -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-benimp.svg">
 
   <!-- İlk boyamada tema ve okuma tercihlerini yükle (varsayılan: green / yeşil) -->
   <script>
@@ -45,19 +45,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Üst Başlık, Navigasyon ve Sağ Üst Tema Seçici -->
+  <!-- Üst Navigasyon, Orta Parti Başlığı ve Sağ Üst Tema Seçici -->
   <header class="site-header">
     <div class="header-inner">
-      <div class="brand-group">
-        <a href="#/" id="site-brand" class="site-brand">
-          <span class="brand-dot" aria-hidden="true"></span>
-          <span id="site-title-text">Arşiv &amp; Perspektif</span>
-        </a>
-        <p id="site-subtitle" class="site-subtitle">Yükleniyor...</p>
-      </div>
-
-      <!-- Dinamik Kategori Navigasyonu (Üst Orta) -->
+      <!-- Dinamik Kategori Navigasyonu (En Üst Sol) -->
       <nav id="site-nav" class="site-nav" aria-label="Ana menü"></nav>
+
+      <!-- Üst Orta Başlık (Logo + Tıklanamaz Düz Yazı) -->
+      <div class="header-center-brand">
+        <img src="assets/images/logo-benimp.svg" alt="Birlik Emek Nizam İlerleme ve Mutluluk Partisi Logosu" class="header-party-logo" width="34" height="34">
+        <span id="header-center-title" class="header-center-title">Birlik Emek Nizam İlerleme ve Mutluluk Partisi</span>
+      </div>
 
       <!-- Sağ Üst Köşe Tema Seçici (Varsayılan: Yeşil) -->
       <div id="theme-switcher" class="theme-switcher" role="group" aria-label="Tema görünümü">
@@ -81,15 +79,85 @@
     </div>
   </header>
 
-  <!-- Dinamik İçerik Alanı (SPA / Hash Router Çıktısı) -->
-  <main id="app-root" class="site-main" aria-live="polite">
-    <div class="container">
-      <div class="loading-state" role="status">
-        <span class="loading-spinner" aria-hidden="true"></span>
-        <p>İçerikler hazırlanıyor...</p>
+  <!-- Piyasa Kayan Bandı (Sitenin en üstünün bir altında) -->
+  <div class="market-ticker-bar" aria-label="Canlı Piyasa Verileri">
+    <script type="module" src="https://widgets.tradingview-widget.com/w/tr/tv-ticker-tape.js"></script>
+    <tv-ticker-tape
+      id="tv-market-ticker"
+      symbols="FX:USDTRY,FX:EURTRY,FX:XAUUSD,FX_IDC:XAUTRYG,FX:EURUSD,BINANCE:BTCUSD,FX:UKOIL,FX:NGAS"
+      theme="dark"
+    ></tv-ticker-tape>
+  </div>
+
+  <!-- 3 Bölgeli Sayfa İskeleti: Sol Canlı Haber Akışı + Orta Ana İçerik + Sağ Türkiye İstatistik Widgetleri -->
+  <div class="page-shell">
+    <!-- Sol Taraf: Canlı RSS Haber Akışı -->
+    <aside id="news-sidebar" class="news-sidebar" aria-label="Canlı Haber Akışı">
+      <div class="rss-header">
+        <div class="rss-title-row">
+          <span class="rss-live-dot" aria-hidden="true"></span>
+          <h2 class="rss-panel-title">Canlı Haber Akışı</h2>
+        </div>
+        <div class="rss-header-actions">
+          <button type="button" id="rss-toggle-scroll" class="rss-ctrl-btn" aria-pressed="false" title="Akışı durdur veya başlat">Duraklat</button>
+          <button type="button" id="rss-refresh-btn" class="rss-ctrl-btn" title="Haberleri yenile">Yenile</button>
+        </div>
       </div>
-    </div>
-  </main>
+
+      <div class="rss-controls">
+        <label class="rss-filter-label" for="rss-filter-select">Kaynak / Kategori</label>
+        <select id="rss-filter-select" class="rss-filter-select" aria-label="Haber kaynağı veya kategori filtresi">
+          <option value="all">Yükleniyor...</option>
+        </select>
+        <p id="rss-status-text" class="rss-status-text">Kaynaklar hazırlanıyor...</p>
+      </div>
+
+      <div id="rss-feed-list" class="rss-feed-list" aria-live="off">
+        <div class="rss-empty-state">
+          <p>Canlı haber akışı yükleniyor...</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Dinamik İçerik Alanı (SPA / Hash Router Çıktısı) -->
+    <main id="app-root" class="site-main" aria-live="polite">
+      <div class="container">
+        <div class="loading-state" role="status">
+          <span class="loading-spinner" aria-hidden="true"></span>
+          <p>İçerikler hazırlanıyor...</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Sağ Taraf: Glostats Canlı Türkiye İstatistik Widgetleri -->
+    <aside id="stats-sidebar" class="stats-sidebar" aria-label="Türkiye Canlı İstatistikleri">
+      <div class="stats-widget-card">
+        <iframe
+          class="glostats-iframe"
+          src="https://glostats.com/widget/counter.html?t=pop&amp;c=TUR&amp;lang=tr&amp;theme=dark"
+          height="178"
+          title="Türkiye canlı nüfusu — Glostats"
+          loading="lazy"
+        ></iframe>
+        <p class="stats-widget-credit">
+          <a href="https://glostats.com/tr/ulke/turkiye/" target="_blank" rel="noopener noreferrer">Türkiye nüfusu</a> — canlı veri: <a href="https://glostats.com/" target="_blank" rel="noopener noreferrer">Glostats</a>
+        </p>
+      </div>
+
+      <div class="stats-widget-card">
+        <iframe
+          class="glostats-iframe"
+          src="https://glostats.com/widget/counter.html?t=debt&amp;c=TUR&amp;lang=tr&amp;theme=dark"
+          height="178"
+          title="Türkiye: kamu borcu, canlı — Glostats"
+          loading="lazy"
+        ></iframe>
+        <p class="stats-widget-credit">
+          <a href="https://glostats.com/tr/borc/turkiye/" target="_blank" rel="noopener noreferrer">Türkiye: kamu borcu, canlı</a> — canlı veri: <a href="https://glostats.com/" target="_blank" rel="noopener noreferrer">Glostats</a>
+        </p>
+      </div>
+    </aside>
+  </div>
 
   <!-- Alt Bilgi (Footer): JSON'dan beslenen sosyal medya, karekodlar ve iletişim bilgileri -->
   <footer id="site-footer" class="site-footer"></footer>
@@ -111,8 +179,9 @@
     </div>
   </div>
 
-  <!-- Karekod Üreticisi & Uygulama Mantığı -->
+  <!-- Karekod Üreticisi, Canlı RSS Akışı & Uygulama Mantığı -->
   <script src="qr.js" defer></script>
+  <script src="rss.js" defer></script>
   <script src="app.js" defer></script>
 </body>
 </html>

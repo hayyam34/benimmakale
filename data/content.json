@@ -1,9 +1,15 @@
 {
   "site": {
     "title": "Arşiv & Perspektif",
+    "bannerTitle": "Birlik Emek Nizam İlerleme ve Mutluluk Partisi",
     "subtitle": "Stratejik Analizler, Türkiye Gerçekleri ve Gelecek Vizyonlu Mega Projeler",
     "author": "Kişisel Araştırma & Tasarım Notları",
-    "copyright": "© 2026 Arşiv & Perspektif. Açık kaynak statik mimari ile hazırlanmıştır."
+    "copyright": "© 2026 Arşiv & Perspektif. Açık kaynak statik mimari ile hazırlanmıştır.",
+    "registrationForm": {
+      "label": "Kayıt Formu",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLScH9OlP06UFAwXtvtwzQVX7EpDimr3YXLihJi1fcombUi7Qdg/viewform?usp=publish-editor",
+      "embedUrl": "https://docs.google.com/forms/d/e/1FAIpQLScH9OlP06UFAwXtvtwzQVX7EpDimr3YXLihJi1fcombUi7Qdg/viewform?embedded=true"
+    }
   },
   "categories": [
     {

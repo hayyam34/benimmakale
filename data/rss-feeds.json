@@ -1,0 +1,1329 @@
+{
+  "updatedAt": "2026-11-24",
+  "feeds": [
+    {
+      "source": "NTV",
+      "category": "Gündem",
+      "url": "https://www.ntv.com.tr/turkiye.rss",
+      "directCors": false,
+      "featured": true
+    },
+    {
+      "source": "NTV",
+      "category": "Dünya",
+      "url": "https://www.ntv.com.tr/dunya.rss",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "NTV",
+      "category": "Ekonomi",
+      "url": "https://www.ntv.com.tr/ekonomi.rss",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "NTV",
+      "category": "Teknoloji",
+      "url": "https://www.ntv.com.tr/teknoloji.rss",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "NTV",
+      "category": "Yaşam",
+      "url": "https://www.ntv.com.tr/yasam.rss",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "NTV",
+      "category": "Sağlık",
+      "url": "https://www.ntv.com.tr/saglik.rss",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "NTV",
+      "category": "Otomobil",
+      "url": "https://www.ntv.com.tr/otomobil.rss",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "NTV",
+      "category": "Eğitim",
+      "url": "https://www.ntv.com.tr/egitim.rss",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Anadolu Ajansı",
+      "category": "Gündem",
+      "url": "https://www.aa.com.tr/tr/rss/default?cat=guncel",
+      "directCors": false,
+      "featured": true
+    },
+    {
+      "source": "Cumhuriyet",
+      "category": "Gündem",
+      "url": "https://www.cumhuriyet.com.tr/rss",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Cumhuriyet",
+      "category": "Kültür & Sanat",
+      "url": "https://www.cumhuriyet.com.tr/rss/kultur-sanat",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Cumhuriyet",
+      "category": "Kültür & Sanat",
+      "url": "https://www.cumhuriyet.com.tr/rss/magazin",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Cumhuriyet",
+      "category": "Genel",
+      "url": "https://www.cumhuriyet.com.tr/rss/terazi",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Cumhuriyet",
+      "category": "Genel",
+      "url": "https://www.cumhuriyet.com.tr/rss/belge-arsiv",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Cumhuriyet",
+      "category": "Genel",
+      "url": "https://www.cumhuriyet.com.tr/rss/secim-2015",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Cumhuriyet",
+      "category": "Genel",
+      "url": "https://www.cumhuriyet.com.tr/rss/yazi-dizileri",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Cumhuriyet",
+      "category": "Genel",
+      "url": "https://www.cumhuriyet.com.tr/rss/cumhuriyet-pazar",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Cumhuriyet",
+      "category": "Genel",
+      "url": "https://www.cumhuriyet.com.tr/rss/pazar-yazilari",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Cumhuriyet",
+      "category": "Genel",
+      "url": "https://www.cumhuriyet.com.tr/rss/yengec",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Cumhuriyet",
+      "category": "Genel",
+      "url": "https://www.cumhuriyet.com.tr/rss/tarim",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Cumhuriyet",
+      "category": "Kültür & Sanat",
+      "url": "https://www.cumhuriyet.com.tr/rss/cizerler",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Cumhuriyet",
+      "category": "Yaşam",
+      "url": "https://www.cumhuriyet.com.tr/rss/gezi",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Cumhuriyet",
+      "category": "Kültür & Sanat",
+      "url": "https://www.cumhuriyet.com.tr/rss/astroloji",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Cumhuriyet",
+      "category": "Kültür & Sanat",
+      "url": "https://www.cumhuriyet.com.tr/rss/tv-rehberi",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Cumhuriyet",
+      "category": "Genel",
+      "url": "https://www.cumhuriyet.com.tr/rss/yerel-secimler",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Cumhuriyet",
+      "category": "Genel",
+      "url": "https://www.cumhuriyet.com.tr/rss/basak",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Cumhuriyet",
+      "category": "Genel",
+      "url": "https://www.cumhuriyet.com.tr/rss/cevre",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Cumhuriyet",
+      "category": "Gündem",
+      "url": "https://www.cumhuriyet.com.tr/rss/turkiye",
+      "directCors": true,
+      "featured": true
+    },
+    {
+      "source": "Cumhuriyet",
+      "category": "Yaşam",
+      "url": "https://www.cumhuriyet.com.tr/rss/yasam",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Cumhuriyet",
+      "category": "Sağlık",
+      "url": "https://www.cumhuriyet.com.tr/rss/saglik",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Cumhuriyet",
+      "category": "Teknoloji",
+      "url": "https://www.cumhuriyet.com.tr/rss/bilim-teknoloji",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Dünya",
+      "category": "Ekonomi",
+      "url": "https://www.dunya.com/rss?dunya",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Habertürk",
+      "category": "Gündem",
+      "url": "https://www.haberturk.com/rss",
+      "directCors": false,
+      "featured": true
+    },
+    {
+      "source": "Hürriyet",
+      "category": "Gündem",
+      "url": "https://www.hurriyet.com.tr/rss/anasayfa",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Hürriyet",
+      "category": "Gündem",
+      "url": "https://www.hurriyet.com.tr/rss/gundem",
+      "directCors": false,
+      "featured": true
+    },
+    {
+      "source": "Hürriyet",
+      "category": "Ekonomi",
+      "url": "https://www.hurriyet.com.tr/rss/ekonomi",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Hürriyet",
+      "category": "Kültür & Sanat",
+      "url": "https://www.hurriyet.com.tr/rss/magazin",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Hürriyet",
+      "category": "Spor",
+      "url": "https://www.hurriyet.com.tr/rss/spor",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Hürriyet",
+      "category": "Dünya",
+      "url": "https://www.hurriyet.com.tr/rss/dunya",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Hürriyet",
+      "category": "Teknoloji",
+      "url": "https://www.hurriyet.com.tr/rss/teknoloji",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Hürriyet",
+      "category": "Kültür & Sanat",
+      "url": "https://www.hurriyet.com.tr/rss/astroloji",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Milliyet",
+      "category": "Gündem",
+      "url": "https://www.milliyet.com.tr/rss/rssnew/sondakikarss.xml",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Sabah",
+      "category": "Ekonomi",
+      "url": "https://www.sabah.com.tr/rss/ekonomi.xml",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Sabah",
+      "category": "Spor",
+      "url": "https://www.sabah.com.tr/rss/spor.xml",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Sabah",
+      "category": "Gündem",
+      "url": "https://www.sabah.com.tr/rss/gundem.xml",
+      "directCors": true,
+      "featured": true
+    },
+    {
+      "source": "Sabah",
+      "category": "Yaşam",
+      "url": "https://www.sabah.com.tr/rss/yasam.xml",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Sabah",
+      "category": "Dünya",
+      "url": "https://www.sabah.com.tr/rss/dunya.xml",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Sabah",
+      "category": "Teknoloji",
+      "url": "https://www.sabah.com.tr/rss/teknoloji.xml",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Sabah",
+      "category": "Otomobil",
+      "url": "https://www.sabah.com.tr/rss/otomobil.xml",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Sabah",
+      "category": "Gündem",
+      "url": "https://www.sabah.com.tr/rss/anasayfa.xml",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Sabah",
+      "category": "Sağlık",
+      "url": "https://www.sabah.com.tr/rss/saglik.xml",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Sabah",
+      "category": "Genel",
+      "url": "https://www.sabah.com.tr/rss/gununicinden.xml",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Sabah",
+      "category": "Gündem",
+      "url": "https://www.sabah.com.tr/rss/sondakika.xml",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Sabah",
+      "category": "Spor",
+      "url": "https://www.sabah.com.tr/rss/galatasaray.xml",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Sabah",
+      "category": "Spor",
+      "url": "https://www.sabah.com.tr/rss/fenerbahce.xml",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Sabah",
+      "category": "Spor",
+      "url": "https://www.sabah.com.tr/rss/besiktas.xml",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Sabah",
+      "category": "Spor",
+      "url": "https://www.sabah.com.tr/rss/trabzonspor.xml",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Sabah",
+      "category": "Spor",
+      "url": "https://www.sabah.com.tr/rss/bursaspor.xml",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Sabah",
+      "category": "Kültür & Sanat",
+      "url": "https://www.sabah.com.tr/rss/kultur-sanat.xml",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Sabah",
+      "category": "Teknoloji",
+      "url": "https://www.sabah.com.tr/rss/oyun.xml",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Sabah",
+      "category": "Genel",
+      "url": "https://www.sabah.com.tr/rss/adana.xml",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Star",
+      "category": "Gündem",
+      "url": "https://www.star.com.tr/rss/rss.asp",
+      "directCors": true,
+      "featured": true
+    },
+    {
+      "source": "Star",
+      "category": "Gündem",
+      "url": "https://www.star.com.tr/rss/rss.asp?cid=500",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Star",
+      "category": "Gündem",
+      "url": "https://www.star.com.tr/rss/rss.asp?cid=13",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Star",
+      "category": "Gündem",
+      "url": "https://www.star.com.tr/rss/rss.asp?cid=15",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Star",
+      "category": "Dünya",
+      "url": "https://www.star.com.tr/rss/rss.asp?cid=16",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Star",
+      "category": "Ekonomi",
+      "url": "https://www.star.com.tr/rss/rss.asp?cid=17",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Star",
+      "category": "Spor",
+      "url": "https://www.star.com.tr/rss/rss.asp?cid=19",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Star",
+      "category": "Gündem",
+      "url": "https://www.star.com.tr/rss/rss.asp?cid=125",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Star",
+      "category": "Gündem",
+      "url": "https://www.star.com.tr/rss/rss.asp?cid=223",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Star",
+      "category": "Gündem",
+      "url": "https://www.star.com.tr/rss/rss.asp?cid=130",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Star",
+      "category": "Ekonomi",
+      "url": "https://www.star.com.tr/rss/rss.asp?cid=170",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Takvim",
+      "category": "Gündem",
+      "url": "https://www.takvim.com.tr/rss/anasayfa.xml",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Takvim",
+      "category": "Genel",
+      "url": "https://www.takvim.com.tr/rss/son24saat.xml",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Takvim",
+      "category": "Gündem",
+      "url": "https://www.takvim.com.tr/rss/guncel.xml",
+      "directCors": true,
+      "featured": true
+    },
+    {
+      "source": "Takvim",
+      "category": "Kültür & Sanat",
+      "url": "https://www.takvim.com.tr/rss/saklambac.xml",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Takvim",
+      "category": "Spor",
+      "url": "https://www.takvim.com.tr/rss/spor.xml",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Takvim",
+      "category": "Genel",
+      "url": "https://www.takvim.com.tr/rss/video.xml",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Takvim",
+      "category": "Kültür & Sanat",
+      "url": "https://www.takvim.com.tr/rss/televizyon.xml",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Ekonomi",
+      "url": "https://www.yeniakit.com.tr/rss/haber/ekonomi",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Gündem",
+      "url": "https://www.yeniakit.com.tr/rss/haber/gunun-mansetleri",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Genel",
+      "url": "https://www.yeniakit.com.tr/rss/haber/bugunku-akit",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Genel",
+      "url": "https://www.yeniakit.com.tr/rss/haber/ozel-haber",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Gündem",
+      "url": "https://www.yeniakit.com.tr/rss/haber/gundem",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Gündem",
+      "url": "https://www.yeniakit.com.tr/rss/haber/siyaset",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Dünya",
+      "url": "https://www.yeniakit.com.tr/rss/haber/dunya",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Teknoloji",
+      "url": "https://www.yeniakit.com.tr/rss/haber/teknoloji",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Spor",
+      "url": "https://www.yeniakit.com.tr/rss/haber/spor",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Genel",
+      "url": "https://www.yeniakit.com.tr/rss/haber/aktuel",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Kültür & Sanat",
+      "url": "https://www.yeniakit.com.tr/rss/haber/kultur-sanat",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Otomobil",
+      "url": "https://www.yeniakit.com.tr/rss/haber/otomotiv",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Ekonomi",
+      "url": "https://www.yeniakit.com.tr/rss/haber/emlak",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Sağlık",
+      "url": "https://www.yeniakit.com.tr/rss/haber/saglik",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Genel",
+      "url": "https://www.yeniakit.com.tr/rss/haber/medya",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Yaşam",
+      "url": "https://www.yeniakit.com.tr/rss/haber/yasam",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Genel",
+      "url": "https://www.yeniakit.com.tr/rss/haber/yerel",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Eğitim",
+      "url": "https://www.yeniakit.com.tr/rss/haber/egitim",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Teknoloji",
+      "url": "https://www.yeniakit.com.tr/rss/video/bilim-teknoloji",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Genel",
+      "url": "https://www.yeniakit.com.tr/rss/video/15temmuz",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Sağlık",
+      "url": "https://www.yeniakit.com.tr/rss/video/cocuk-egitim",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Dünya",
+      "url": "https://www.yeniakit.com.tr/rss/video/dunya",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Ekonomi",
+      "url": "https://www.yeniakit.com.tr/rss/video/ekonomi",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Ekonomi",
+      "url": "https://www.yeniakit.com.tr/rss/video/emlak-rehberi",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Yaşam",
+      "url": "https://www.yeniakit.com.tr/rss/video/gezi",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Gündem",
+      "url": "https://www.yeniakit.com.tr/rss/video/guncel",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Gündem",
+      "url": "https://www.yeniakit.com.tr/rss/video/gundem",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Yaşam",
+      "url": "https://www.yeniakit.com.tr/rss/video/hayat-aktuel",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Yaşam",
+      "url": "https://www.yeniakit.com.tr/rss/video/islam",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Kültür & Sanat",
+      "url": "https://www.yeniakit.com.tr/rss/video/kultur-sanat",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Genel",
+      "url": "https://www.yeniakit.com.tr/rss/video/medya",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Yaşam",
+      "url": "https://www.yeniakit.com.tr/rss/video/ramazan",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Gündem",
+      "url": "https://www.yeniakit.com.tr/rss/video/siyaset",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Spor",
+      "url": "https://www.yeniakit.com.tr/rss/video/spor",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Genel",
+      "url": "https://www.yeniakit.com.tr/rss/video/trafik-kazalari",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Gündem",
+      "url": "https://www.yeniakit.com.tr/rss/video/turkiye",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Yaşam",
+      "url": "https://www.yeniakit.com.tr/rss/video/yasam",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Akit",
+      "category": "Genel",
+      "url": "https://www.yeniakit.com.tr/rss/video/yerel",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Asır",
+      "category": "Gündem",
+      "url": "https://www.yeniasir.com.tr/rss/anasayfa.xml",
+      "directCors": true,
+      "featured": true
+    },
+    {
+      "source": "Yeni Şafak",
+      "category": "Gündem",
+      "url": "https://www.yenisafak.com/rss?category=gundem",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Şafak",
+      "category": "Spor",
+      "url": "https://www.yenisafak.com/rss?category=spor",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Şafak",
+      "category": "Ekonomi",
+      "url": "https://www.yenisafak.com/rss?category=ekonomi",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Şafak",
+      "category": "Teknoloji",
+      "url": "https://www.yenisafak.com/rss?category=teknoloji",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Şafak",
+      "category": "Yaşam",
+      "url": "https://www.yenisafak.com/rss?category=hayat",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Yeni Şafak",
+      "category": "Dünya",
+      "url": "https://www.yenisafak.com/rss?category=dunya",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "A Haber",
+      "category": "Gündem",
+      "url": "https://www.ahaber.com.tr/rss/anasayfa.xml",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "A Haber",
+      "category": "Gündem",
+      "url": "https://www.ahaber.com.tr/rss/gundem.xml",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "A Haber",
+      "category": "Ekonomi",
+      "url": "https://www.ahaber.com.tr/rss/ekonomi.xml",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "A Haber",
+      "category": "Spor",
+      "url": "https://www.ahaber.com.tr/rss/spor.xml",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "A Haber",
+      "category": "Yaşam",
+      "url": "https://www.ahaber.com.tr/rss/yasam.xml",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "A Haber",
+      "category": "Dünya",
+      "url": "https://www.ahaber.com.tr/rss/dunya.xml",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "A Haber",
+      "category": "Genel",
+      "url": "https://www.ahaber.com.tr/rss/son24saat.xml",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "A Haber",
+      "category": "Teknoloji",
+      "url": "https://www.ahaber.com.tr/rss/teknoloji.xml",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "A Haber",
+      "category": "Kültür & Sanat",
+      "url": "https://www.ahaber.com.tr/rss/magazin.xml",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "A Haber",
+      "category": "Otomobil",
+      "url": "https://www.ahaber.com.tr/rss/otomobil.xml",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "A Haber",
+      "category": "Genel",
+      "url": "https://www.ahaber.com.tr/rss/haberler.xml",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "A Haber",
+      "category": "Yaşam",
+      "url": "https://www.ahaber.com.tr/rss/din.xml",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "A Haber",
+      "category": "Yaşam",
+      "url": "https://www.ahaber.com.tr/rss/tarih.xml",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "A Haber",
+      "category": "Genel",
+      "url": "https://www.ahaber.com.tr/rss/analiz.xml",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "A Haber",
+      "category": "Sağlık",
+      "url": "https://www.ahaber.com.tr/rss/saglik.xml",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Gündem",
+      "url": "https://www.cnnturk.com/feed/rss/all/news",
+      "directCors": true,
+      "featured": true
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Gündem",
+      "url": "https://www.cnnturk.com/feed/rss/turkiye/news",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Dünya",
+      "url": "https://www.cnnturk.com/feed/rss/dunya/news",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Kültür & Sanat",
+      "url": "https://www.cnnturk.com/feed/rss/kultur-sanat/news",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Yaşam",
+      "url": "https://www.cnnturk.com/feed/rss/yasam/news",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Kültür & Sanat",
+      "url": "https://www.cnnturk.com/feed/rss/magazin/news",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Ekonomi",
+      "url": "https://www.cnnturk.com/feed/rss/ekonomi/news",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Spor",
+      "url": "https://www.cnnturk.com/feed/rss/spor/news",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Sağlık",
+      "url": "https://www.cnnturk.com/feed/rss/saglik/news",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Otomobil",
+      "url": "https://www.cnnturk.com/feed/rss/otomobil/news",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Yaşam",
+      "url": "https://www.cnnturk.com/feed/rss/seyahat/news",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Genel",
+      "url": "https://www.cnnturk.com/feed/rss/all/video",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Gündem",
+      "url": "https://www.cnnturk.com/feed/rss/turkiye/video",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Dünya",
+      "url": "https://www.cnnturk.com/feed/rss/dunya/video",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Kültür & Sanat",
+      "url": "https://www.cnnturk.com/feed/rss/kultur-sanat/video",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Yaşam",
+      "url": "https://www.cnnturk.com/feed/rss/yasam/video",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Kültür & Sanat",
+      "url": "https://www.cnnturk.com/feed/rss/magazin/video",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Ekonomi",
+      "url": "https://www.cnnturk.com/feed/rss/ekonomi/video",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Spor",
+      "url": "https://www.cnnturk.com/feed/rss/spor/video",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Sağlık",
+      "url": "https://www.cnnturk.com/feed/rss/saglik/video",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Otomobil",
+      "url": "https://www.cnnturk.com/feed/rss/otomobil/video",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Yaşam",
+      "url": "https://www.cnnturk.com/feed/rss/seyahat/video",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Genel",
+      "url": "https://www.cnnturk.com/feed/rss/all/gallery",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Gündem",
+      "url": "https://www.cnnturk.com/feed/rss/turkiye/gallery",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Dünya",
+      "url": "https://www.cnnturk.com/feed/rss/dunya/gallery",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Kültür & Sanat",
+      "url": "https://www.cnnturk.com/feed/rss/kultur-sanat/gallery",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Yaşam",
+      "url": "https://www.cnnturk.com/feed/rss/yasam/gallery",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Kültür & Sanat",
+      "url": "https://www.cnnturk.com/feed/rss/magazin/gallery",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Ekonomi",
+      "url": "https://www.cnnturk.com/feed/rss/ekonomi/gallery",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Spor",
+      "url": "https://www.cnnturk.com/feed/rss/spor/gallery",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Sağlık",
+      "url": "https://www.cnnturk.com/feed/rss/saglik/gallery",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Otomobil",
+      "url": "https://www.cnnturk.com/feed/rss/otomobil/gallery",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "CNN Türk",
+      "category": "Yaşam",
+      "url": "https://www.cnnturk.com/feed/rss/seyahat/gallery",
+      "directCors": true,
+      "featured": false
+    },
+    {
+      "source": "TRT Haber",
+      "category": "Gündem",
+      "url": "https://www.trthaber.com/sondakika.rss",
+      "directCors": false,
+      "featured": true
+    },
+    {
+      "source": "Açık Gazete",
+      "category": "Gündem",
+      "url": "https://acikgazete.com/feed/",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "BBC Türkçe",
+      "category": "Dünya",
+      "url": "https://feeds.bbci.co.uk/turkce/rss.xml",
+      "directCors": false,
+      "featured": true
+    },
+    {
+      "source": "DW Türkçe",
+      "category": "Dünya",
+      "url": "https://rss.dw.com/rdf/rss-tur-all",
+      "directCors": true,
+      "featured": true
+    },
+    {
+      "source": "Ensonhaber",
+      "category": "Genel",
+      "url": "https://www.ensonhaber.com/rss/ensonhaber.xml",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Mynet",
+      "category": "Kültür & Sanat",
+      "url": "https://www.mynet.com/rss/magazin/sondakika.rss",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Mynet",
+      "category": "Spor",
+      "url": "https://spor.mynet.com/rss",
+      "directCors": true,
+      "featured": true
+    },
+    {
+      "source": "Mynet",
+      "category": "Gündem",
+      "url": "https://www.mynet.com/rss/haber/sondakika.rss",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Mynet",
+      "category": "Genel",
+      "url": "https://www.mynet.com/rss/haber/gununozeti.rss",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Mynet",
+      "category": "Gündem",
+      "url": "https://www.mynet.com/rss/haber/politika.rss",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Mynet",
+      "category": "Teknoloji",
+      "url": "https://www.mynet.com/rss/haber/teknoloji.rss",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Mynet",
+      "category": "Dünya",
+      "url": "https://www.mynet.com/rss/haber/dunya.rss",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Mynet",
+      "category": "Yaşam",
+      "url": "https://www.mynet.com/rss/haber/yasam.rss",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Mynet",
+      "category": "Sağlık",
+      "url": "https://www.mynet.com/rss/haber/saglik.rss",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Anlatılanın Ötesi",
+      "category": "Genel",
+      "url": "https://anlatilaninotesi.com.tr/export/rss2/archive/index.xml",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "Türkiye Haber Ajansı",
+      "category": "Gündem",
+      "url": "https://www.turkiyehaberajansi.com/rss.xml",
+      "directCors": false,
+      "featured": false
+    },
+    {
+      "source": "İnternethaber",
+      "category": "Gündem",
+      "url": "https://www.internethaber.com/rss",
+      "directCors": false,
+      "featured": false
+    }
+  ],
+  "activeFeedCount": 189
+}
