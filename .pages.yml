@@ -56,7 +56,7 @@ content:
             type: rich-text
           - name: icon
             label: İcon
-            type: image
+            type: string
       - name: articles
         label: Articles
         type: object
@@ -67,28 +67,34 @@ content:
             type: string
           - name: categoryId
             label: Categoryıd
-            type: string
+            type: select
+            options:
+              values:
+                - value: turkiye-gercekleri
+                  label: Türkiye Gerçekleri (turkiye-gercekleri)
+                - value: mega-projelerim
+                  label: Mega Projelerim (mega-projelerim)
           - name: title
             label: Title
             type: string
           - name: date
             label: Date
-            type: string
+            type: date
           - name: readingTime
             label: Readingtime
             type: string
           - name: summary
             label: Summary
-            type: rich-text
+            type: string
           - name: coverImage
             label: Coverımage
             type: image
           - name: coverAlt
             label: Coveralt
-            type: image
+            type: string
           - name: tags
             label: Tags
-            type: object
+            type: string
             list: true
           - name: blocks
             label: Blocks
@@ -97,10 +103,28 @@ content:
             fields:
               - name: type
                 label: Type
-                type: string
+                type: select
+                options:
+                  values:
+                    - paragraph
+                    - heading
+                    - image
+                    - youtube
               - name: text
                 label: Text
                 type: rich-text
+              - name: src
+                label: Src
+                type: string
+              - name: alt
+                label: Alt
+                type: string
+              - name: caption
+                label: Caption
+                type: string
+              - name: videoId
+                label: Videoıd
+                type: string
           - name: references
             label: References
             type: object
@@ -129,7 +153,22 @@ content:
             fields:
               - name: platform
                 label: Platform
-                type: string
+                type: select
+                options:
+                  values:
+                    - GitHub
+                    - X
+                    - YouTube
+                    - LinkedIn
+                    - github
+                    - twitter
+                    - x
+                    - linkedin
+                    - instagram
+                    - youtube
+                    - session
+                    - telegram
+                    - website
               - name: label
                 label: Label
                 type: string
@@ -138,7 +177,7 @@ content:
                 type: string
               - name: icon
                 label: İcon
-                type: image
+                type: string
               - name: qr
                 label: Qr
                 type: boolean
@@ -149,7 +188,14 @@ content:
             fields:
               - name: type
                 label: Type
-                type: string
+                type: select
+                options:
+                  values:
+                    - email
+                    - session
+                    - location
+                    - phone
+                    - link
               - name: label
                 label: Label
                 type: string
