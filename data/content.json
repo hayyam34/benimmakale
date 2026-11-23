@@ -14,13 +14,43 @@
   "categories": [
     {
       "id": "turkiye-gercekleri",
-      "title": "Türkiye Gerçekleri",
+      "title": "Türkiye'nin Ahvali",
       "description": "Coğrafya, demografi, doğal kaynaklar ve yapısal meseleler üzerine veriye dayalı derinlikli incelemeler."
     },
     {
       "id": "mega-projelerim",
-      "title": "Mega Projelerim",
+      "title": "Mega Projeler",
       "description": "Ulaşım, enerji, su yönetimi ve kendi kendine yeten ekosistemler üzerine kapsamlı mühendislik ve vizyon tasarımları."
+    }
+  ],
+  "articles": [
+    {
+      "slug": "1",
+      "categoryId": "turkiye-gercekleri",
+      "title": "Türkiye ve İşsizlik",
+      "date": "2026-11-24",
+      "readingTime": "4",
+      "summary": "Türkiye ekonomisinin en yapısal ve yakıcı sorunlarından biri olan işsizlik, yalnızca makroekonomik bir gösterge değil; doğrudan toplumsal refahı, gelir dağılımını ve gelecek beklentilerini şekillendiren temel bir dinamiktir. Güncel veriler, manşet işsizlik oranları ile geniş tanımlı işsizlik göstergeleri arasındaki makasın giderek açıldığına işaret etmektedir.",
+      "coverImage": "/assets/images/853615.png",
+      "coverAlt": "Mezun ve İşsiz",
+      "tags": [
+        "İşsizlik"
+      ],
+      "blocks": [
+        {
+          "type": "image",
+          "src": "/assets/images/aab371bff0f01ce47fd47f6003a0f2f1.webp",
+          "alt": "Rakamlar yalan söylemez."
+        },
+        {
+          "type": "paragraph",
+          "text": "## Mevcut Görünüm: Rakamların Anlattığı Gerçek\n\nTürkiye İstatistik Kurumu (TÜİK) tarafından açıklanan 2026 yılı üçüncü çeyrek (Temmuz-Eylül) iş gücü istatistiklerine göre, mevsim etkisinden arındırılmış dar tanımlı işsizlik oranı bir önceki çeyreğe kıyasla 0,1 puan artarak **%8,1** seviyesinde gerçekleşmiştir. Bu dönemde 15 ve daha yukarı yaştaki işsiz sayısı 46 bin kişi artarak **2 milyon 870 bin** kişiye ulaşırken, istihdam edilenlerin sayısı 62 bin kişi azalarak 32 milyon 434 bine gerilemiştir.\n\nAncak iş gücü piyasasındaki gerçek tabloyu anlamak için yalnızca iş arayıp bulamayanları kapsayan \"dar tanımlı\" verilere bakmak yeterli değildir. Zamana bağlı eksik istihdam, potansiyel iş gücü ve işsizlerden oluşan atıl iş gücü oranı üçüncü çeyrekte 1 puanlık artışla **%30,9** seviyesine yükselmiştir. Bu tablo, çalışma çağındaki her üç kişiden birinin üretim sürecine tam anlamıyla dahil olamadığını göstermektedir.\n\n## Yapısal Nedenler ve Kırılganlık Alanları\n\nTürkiye'deki işsizlik sorununun kökeninde konjonktürel dalgalanmaların ötesinde derin yapısal nedenler yatmaktadır:\n\n- **Eğitim ve İstihdam Uyumsuzluğu:** Yükseköğretim mezunlarının sayısındaki hızlı artışa karşın, ekonominin yüksek katma değerli ve nitelikli iş yaratma kapasitesi aynı hızda büyümemektedir. İş dünyasının aradığı teknik beceriler ile eğitim sisteminin sunduğu müfredat arasındaki kopukluk, \"diplomalı işsizlik\" olgusunu beslemektedir.\n- **Genç ve Kadın İşsizliğindeki Cinsiyet Makası:** 15-24 yaş grubunu kapsayan genç nüfusta genel işsizlik oranı %14,1 iken, bu oran genç kadınlarda **%21,3**'e çıkmaktadır. Genç kadınlarda geniş tanımlı işsizlik oranının %50 sınırını aşması, bakım yükümlülükleri ve toplumsal cinsiyet eşitsizliğinin iş gücü piyasasına katılım önündeki en büyük engeller olduğunu kanıtlamaktadır.\n- **Sektörel Daralma ve Üretim Kaybı:** Son çeyrek verileri, istihdamdaki gerilemenin özellikle üretici sektörlerde yoğunlaştığını göstermektedir. Sanayi sektöründe 133 bin, tarım sektöründe ise 58 bin kişilik istihdam kaybı yaşanırken; istihdamın %60,3'ünün hizmet sektöründe toplanması, ekonominin güvencesiz ve düşük verimli işlere bağımlılığını artırmaktadır.\n\n## Çözüm İçin Atılması Gereken Adımlar\n\nİşsizlikle kalıcı mücadele, kısa vadeli teşvik paketlerinden ziyade bütüncül bir kalkınma stratejisi gerektirir:\n\n1. **Sanayi ve Teknoloji Odaklı Yatırımlar:** İnşaat ve düşük katma değerli hizmetler yerine; yeşil dönüşüm, yazılım, ileri imalat ve tarım teknolojileri gibi istihdam çarpanı yüksek alanlara yatırım çekilmelidir.\n2. **Mesleki Eğitimin Dönüşümü:** Meslek liseleri ve yüksekokulları, özel sektörle doğrudan entegre edilerek piyasanın gerçek ihtiyaçlarına yanıt verecek şekilde yeniden yapılandırılmalıdır.\n3. **Kadın İstihdamını Destekleyen Sosyal Politikalar:** Ücretsiz ve yaygın kreş hizmetleri, esnek ve güvenceli çalışma modelleri ile kadınların iş gücüne katılımını engelleyen yapısal bariyerler kaldırılmalıdır.\n\nTürkiye'nin demografik fırsat penceresini avantaja çevirebilmesi, genç ve dinamik nüfusunu nitelikli, güvenceli ve üretken istihdam alanlarıyla buluşturabilmesine bağlıdır."
+        },
+        {
+          "type": "youtube",
+          "videoId": "https://youtu.be/s-oLysZmZlg"
+        }
+      ]
     }
   ],
   "footer": {
@@ -59,8 +89,9 @@
         "type": "location",
         "label": "Konum",
         "value": "Türkiye",
+        "href": "https://maps.app.goo.gl/GuyqqdnMSjzForKW9",
         "copyable": true,
-        "qr": false
+        "qr": true
       }
     ]
   }
