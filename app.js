@@ -448,14 +448,6 @@
     const panel = document.getElementById('appearance-panel');
     if (!panel) return;
 
-    const toggleBtn = document.getElementById('appearance-mobile-toggle');
-    if (toggleBtn) {
-      toggleBtn.addEventListener('click', () => {
-        const isOpen = panel.classList.toggle('is-open');
-        toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      });
-    }
-
     panel.querySelectorAll('input[name="reader-text-size"]').forEach((radio) => {
       radio.addEventListener('change', () => {
         if (radio.checked) {
@@ -1251,18 +1243,13 @@
     }
   }
 
-  /** Vikipedi tarzı yan Görünüm Paneli HTML'i */
+  /** Sağ panel widgetleri altında gösterilen Vikipedi tarzı Görünüm Paneli HTML'i */
   function renderAppearancePanelHtml() {
     const size = state.readerPrefs.textSize;
     const width = state.readerPrefs.width;
 
     return `
-      <aside id="appearance-panel" class="article-appearance-panel" aria-label="Görünüm ayarları">
-        <button type="button" id="appearance-mobile-toggle" class="appearance-mobile-toggle" aria-expanded="false">
-          <span>Görünüm (Metin &amp; Genişlik)</span>
-          <span>▾</span>
-        </button>
-
+      <section id="appearance-panel" class="article-appearance-panel" aria-label="Görünüm ayarları">
         <div class="appearance-desktop-header">
           <h2 class="appearance-title">Görünüm</h2>
           <span class="appearance-badge">Okuma</span>
@@ -1301,7 +1288,7 @@
             </div>
           </fieldset>
         </div>
-      </aside>
+      </section>
     `;
   }
 
@@ -1447,8 +1434,6 @@
               <a href="#/" class="back-btn">Ana Sayfa</a>
             </nav>
           </article>
-
-          ${renderAppearancePanelHtml()}
         </div>
       </div>
     `;
@@ -1550,6 +1535,17 @@
     }
 
     appRoot.innerHTML = viewHtml;
+
+    const appearanceSlot = document.getElementById('sidebar-appearance-slot');
+    if (appearanceSlot) {
+      if (activeArticle) {
+        appearanceSlot.innerHTML = renderAppearancePanelHtml();
+        appearanceSlot.hidden = false;
+      } else {
+        appearanceSlot.innerHTML = '';
+        appearanceSlot.hidden = true;
+      }
+    }
 
     if (activeArticle) {
       bindAppearancePanel();

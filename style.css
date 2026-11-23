@@ -682,20 +682,19 @@ html[data-reader-width="wide"] .article-page-container {
 }
 
 /* ==========================================================================
-   Makale Detay Görünümü + Vikipedi Tarzı Yan Görünüm Paneli
+   Makale Detay Görünümü (Ortalanmış Okuma Sütunu)
    ========================================================================== */
 
 .article-layout {
-  display: grid;
-  grid-template-columns: minmax(0, var(--reader-article-max)) 228px;
-  justify-content: center;
-  align-items: start;
-  gap: 2.5rem;
+  display: block;
 }
 
 .article-reader {
   width: 100%;
+  max-width: var(--reader-article-max);
+  margin: 0 auto;
   min-width: 0;
+  transition: max-width 200ms ease;
 }
 
 .article-header {
@@ -860,29 +859,17 @@ html[data-reader-width="wide"] .article-page-container {
   border: 0;
 }
 
-/* Vikipedi Tarzı Sağ Görünüm Paneli */
+/* Vikipedi Tarzı Sağ Panel Görünüm Kartı */
+.sidebar-appearance-slot[hidden] {
+  display: none;
+}
+
 .article-appearance-panel {
-  position: sticky;
-  top: 5.75rem;
   background-color: var(--bg-surface);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
-  padding: 1rem 1.05rem;
+  padding: 0.95rem 1rem;
   box-shadow: var(--shadow-card);
-}
-
-.appearance-mobile-toggle {
-  display: none;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: var(--text-primary);
-  font-size: 0.92rem;
-  font-weight: 700;
-  cursor: pointer;
 }
 
 .appearance-desktop-header {
@@ -908,9 +895,10 @@ html[data-reader-width="wide"] .article-page-container {
 }
 
 .appearance-body {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
+  align-items: start;
 }
 
 .appearance-group {
@@ -1893,6 +1881,10 @@ html[data-reader-width="wide"] .article-page-container {
 .stats-sidebar {
   position: sticky;
   top: 4.5rem;
+  max-height: calc(100vh - 5.25rem);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color) transparent;
   margin: 1.25rem 1rem 1.25rem 0;
   display: flex;
   flex-direction: column;
@@ -1936,47 +1928,6 @@ html[data-reader-width="wide"] .article-page-container {
   }
 }
 
-@media (max-width: 1480px) {
-  .article-layout {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  /* Orta ve dar ekranlarda Görünüm paneli makalenin hemen üstünde kompakt açılır kutu olur */
-  .article-appearance-panel {
-    order: -1;
-    position: static;
-    padding: 0.85rem 1rem;
-  }
-
-  .appearance-desktop-header {
-    display: none;
-  }
-
-  .appearance-mobile-toggle {
-    display: flex;
-  }
-
-  .article-appearance-panel:not(.is-open) .appearance-body {
-    display: none;
-  }
-
-  .article-appearance-panel.is-open .appearance-body {
-    margin-top: 0.85rem;
-    padding-top: 0.85rem;
-    border-top: 1px solid var(--border-color);
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1.25rem;
-  }
-
-  .appearance-options {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-  }
-}
-
 @media (max-width: 1240px) {
   .page-shell {
     grid-template-columns: 285px minmax(0, 1fr);
@@ -1985,10 +1936,16 @@ html[data-reader-width="wide"] .article-page-container {
   .stats-sidebar {
     grid-column: 1 / -1;
     position: static;
+    max-height: none;
+    overflow-y: visible;
     margin: 0 1.25rem 2rem;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
+  }
+
+  .sidebar-appearance-slot {
+    grid-column: 1 / -1;
   }
 }
 
